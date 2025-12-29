@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#8B4789">
+
+    <title>Our Wedding</title>
+    <!-- In index.html <head> -->
+    <meta name="description" content="Wedding invitation for [Couple Names]. Join us on [Date] in [Location].">
+    <meta name="keywords" content="wedding, invitation, [couple names], [location], [date]">
+    <meta name="author" content="[Couple Names]">
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Our Wedding">
+    <meta property="og:description" content="Join us as we celebrate our love">
+    <meta property="og:image" content="https://your-image-url.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Wedding">
+    <meta name="twitter:description" content="Join us to celebrate">
+    <meta name="twitter:image" content="https://your-image-url.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Playfair+Display:wght@600;700;900&family=Lora:wght@400;500&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ==================== 1. HERO SECTION ==================== -->
+    <header class="hero" id="hero">
+        <div class="hero__background"></div>
+        <div class="hero__overlay"></div>
+
+        <div class="hero__content">
+            <div class="hero__names animate-fade-in-up" style="animation-delay: 0.2s">
+                <p class="hero__name-groom">Anh Chàng</p>
+                <span class="hero__heart">❤️</span>
+                <p class="hero__name-bride">Em Yêu</p>
+            </div>
+
+            <h1 class="hero__title animate-fade-in-up" style="animation-delay: 0.4s">
+                We're Getting Married
+            </h1>
+
+            <p class="hero__date animate-fade-in-up" style="animation-delay: 0.6s">
+                December 24, 2025
+            </p>
+
+            <p class="hero__location animate-fade-in-up" style="animation-delay: 0.8s">
+                Hà Nội, Việt Nam
+            </p>
+        </div>
+
+        <!-- Scroll indicator -->
+        <a href="#bride-groom" class="hero__scroll-indicator animate-bounce">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </a>
+    </header>
+
+    <!-- ==================== 2. BRIDE & GROOM INTRODUCTION ==================== -->
+    <section class="bride-groom" id="bride-groom">
+        <div class="container">
+            <h2 class="section-title">Meet The Couple</h2>
+
+            <div class="bride-groom__cards">
+                <!-- Groom Card -->
+                <div class="couple-card couple-card--groom scroll-animate" data-animation="slide-left">
+                    <div class="couple-card__image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop"
+                            alt="Groom" loading="lazy">
+                    </div>
+                    <div class="couple-card__content">
+                        <h3 class="couple-card__name">Anh Chàng</h3>
+                        <p class="couple-card__title">The Groom</p>
+                        <p class="couple-card__description">
+                            A kind-hearted soul with a passion for life and endless love for his bride.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bride Card -->
+                <div class="couple-card couple-card--bride scroll-animate" data-animation="slide-right">
+                    <div class="couple-card__image">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop"
+                            alt="Bride" loading="lazy">
+                    </div>
+                    <div class="couple-card__content">
+                        <h3 class="couple-card__name">Em Yêu</h3>
+                        <p class="couple-card__title">The Bride</p>
+                        <p class="couple-card__description">
+                            A beautiful spirit with grace, elegance, and an infinite love story to share.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 3. SAVE THE DATE / COUNTDOWN ==================== -->
+    <section class="countdown-section" id="countdown">
+        <div class="container">
+            <h2 class="section-title scroll-animate" data-animation="fade-in">Save The Date</h2>
+
+            <div class="countdown scroll-animate" data-animation="fade-in">
+                <div class="countdown__box">
+                    <div class="countdown__number" id="countdown-days">0</div>
+                    <div class="countdown__label">Days</div>
+                </div>
+                <div class="countdown__box">
+                    <div class="countdown__number" id="countdown-hours">0</div>
+                    <div class="countdown__label">Hours</div>
+                </div>
+                <div class="countdown__box">
+                    <div class="countdown__number" id="countdown-minutes">0</div>
+                    <div class="countdown__label">Minutes</div>
+                </div>
+                <div class="countdown__box">
+                    <div class="countdown__number" id="countdown-seconds">0</div>
+                    <div class="countdown__label">Seconds</div>
+                </div>
+            </div>
+
+            <p class="countdown__text">
+                <time datetime="2025-12-24">Tuesday, December 24, 2025</time>
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== 4. INVITATION MESSAGE ==================== -->
+    <section class="invitation" id="invitation">
+        <div class="container">
+            <div class="invitation__content scroll-animate" data-animation="fade-in">
+                <div class="invitation__decorative">✿</div>
+
+                <h2 class="invitation__title">Together With Our Families</h2>
+
+                <p class="invitation__text">
+                    We request the honor of your presence at the marriage of
+                </p>
+
+                <p class="invitation__names">
+                    <strong>Anh Chàng</strong> and <strong>Em Yêu</strong>
+                </p>
+
+                <p class="invitation__text">
+                    on the twenty-fourth of December, twenty twenty-five
+                    <br>at half past five o'clock in the morning
+                    <br>Hà Nội, Việt Nam
+                </p>
+
+                <p class="invitation__text invitation__text--rsvp">
+                    <em>Reception to follow</em>
+                </p>
+
+                <div class="invitation__decorative">✿</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 5. CEREMONY INFORMATION ==================== -->
+    <section class="ceremony-info" id="ceremony">
+        <div class="container">
+            <h2 class="section-title scroll-animate" data-animation="fade-in">Ceremony Details</h2>
+
+            <div class="ceremony-cards">
+                <!-- Ceremony Card -->
+                <div class="info-card scroll-animate" data-animation="slide-up">
+                    <div class="info-card__icon">🌸</div>
+                    <h3 class="info-card__title">Wedding Ceremony</h3>
+                    <div class="info-card__details">
+                        <p><strong>Time:</strong> 5:30 AM</p>
+                        <p><strong>Guest Arrival:</strong> 5:00 AM</p>
+                    </div>
+                    <div class="info-card__location">
+                        <p><strong>Venue:</strong> Ancient Pagoda</p>
+                        <p class="info-card__address">123 Ancient Street, Hà Nội, Vietnam</p>
+                    </div>
+                    <a href="https://maps.google.com" class="btn btn--secondary" target="_blank"
+                        rel="noopener noreferrer">
+                        View Map
+                    </a>
+                </div>
+
+                <!-- Reception Card -->
+                <div class="info-card scroll-animate" data-animation="slide-up">
+                    <div class="info-card__icon">🍾</div>
+                    <h3 class="info-card__title">Reception</h3>
+                    <div class="info-card__details">
+                        <p><strong>Time:</strong> 6:30 PM</p>
+                        <p><strong>Dinner & Celebration</strong></p>
+                    </div>
+                    <div class="info-card__location">
+                        <p><strong>Venue:</strong> Grand Ballroom</p>
+                        <p class="info-card__address">456 Elegance Avenue, Hà Nội, Vietnam</p>
+                    </div>
+                    <a href="https://maps.google.com" class="btn btn--secondary" target="_blank"
+                        rel="noopener noreferrer">
+                        View Map
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 6. MAP SECTION ==================== -->
+    <section class="map-section" id="map">
+        <div class="container">
+            <h2 class="section-title scroll-animate" data-animation="fade-in">Wedding Location</h2>
+
+            <div class="map-wrapper scroll-animate" data-animation="zoom-in">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.5761830850903!2d105.82745931533!3d21.028556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab46ca77c4e5%3A0x7d3e2e3e3e3e3e3e!2sHanoi%2C%20Vietnam!5e0!3m2!1sen!2s!4v1640000000000"
+                    width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="Wedding Venue Map">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 7. LOVE STORY / TIMELINE ==================== -->
+    <section class="love-story" id="story">
+        <div class="container">
+            <h2 class="section-title scroll-animate" data-animation="fade-in">Our Love Story</h2>
+
+            <div class="timeline">
+                <!-- Milestone 1 -->
+                <div class="timeline__item scroll-animate" data-animation="fade-in-up">
+                    <div class="timeline__marker">
+                        <span class="timeline__icon">👀</span>
+                    </div>
+                    <div class="timeline__content">
+                        <h3 class="timeline__title">First Meeting</h3>
+                        <p class="timeline__date">2019</p>
+                        <p class="timeline__description">
+                            Two souls collided on a sunny autumn day. A glance, a smile, and fate sealed the moment
+                            forever.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 2 -->
+                <div class="timeline__item scroll-animate" data-animation="fade-in-up">
+                    <div class="timeline__marker">
+                        <span class="timeline__icon">💕</span>
+                    </div>
+                    <div class="timeline__content">
+                        <h3 class="timeline__title">Falling in Love</h3>
+                        <p class="timeline__date">2020</p>
+                        <p class="timeline__description">
+                            Long walks, shared dreams, and countless moments that proved we were meant for each other.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 3 -->
+                <div class="timeline__item scroll-animate" data-animation="fade-in-up">
+                    <div class="timeline__marker">
+                        <span class="timeline__icon">💍</span>
+                    </div>
+                    <div class="timeline__content">
+                        <h3 class="timeline__title">The Proposal</h3>
+                        <p class="timeline__date">2024</p>
+                        <p class="timeline__description">
+                            On a starlit evening, he asked the question. Through tears of joy, she said yes to forever.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 4 -->
+                <div class="timeline__item scroll-animate" data-animation="fade-in-up">
+                    <div class="timeline__marker">
+                        <span class="timeline__icon">💒</span>
+                    </div>
+                    <div class="timeline__content">
+                        <h3 class="timeline__title">The Wedding</h3>
+                        <p class="timeline__date">2025</p>
+                        <p class="timeline__description">
+                            And now, we celebrate our love with family and friends. Our greatest adventure begins.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 8. GALLERY & VIDEO ==================== -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title scroll-animate" data-animation="fade-in">Moments & Memories</h2>
+
+            <!-- Video Section -->
+            <div class="video-wrapper scroll-animate" data-animation="fade-in">
+                <div class="video-container">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=450&fit=crop"
+                        alt="Wedding Video Thumbnail" class="video-thumbnail" loading="lazy">
+                    <button class="play-button" aria-label="Play video">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                            <circle cx="30" cy="30" r="30" fill="white" opacity="0.9" />
+                            <polygon points="23,18 23,42 45,30" fill="#8B4789" />
+                        </svg>
+                    </button>
+                </div>
+                <p class="video-caption">Our engagement video - Coming soon</p>
+            </div>
+
+            <!-- Photo Gallery -->
+            <h3 class="gallery__subtitle scroll-animate" data-animation="fade-in">Photo Album</h3>
+
+            <div class="gallery scroll-animate" data-animation="fade-in">
+                <div class="gallery__item" data-index="0">
+                    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&h=400&fit=crop"
+                        alt="Gallery photo 1" loading="lazy">
+                    <div class="gallery__overlay">
+                        <button class="gallery__btn" aria-label="View larger image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery__item" data-index="1">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=400&fit=crop"
+                        alt="Gallery photo 2" loading="lazy">
+                    <div class="gallery__overlay">
+                        <button class="gallery__btn" aria-label="View larger image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery__item" data-index="2">
+                    <img src="https://images.unsplash.com/photo-1465495976519-51d3650b01ae?w=400&h=400&fit=crop"
+                        alt="Gallery photo 3" loading="lazy">
+                    <div class="gallery__overlay">
+                        <button class="gallery__btn" aria-label="View larger image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery__item" data-index="3">
+                    <img src="https://images.unsplash.com/photo-1532438386846-8de6f9d8f8b0?w=400&h=400&fit=crop"
+                        alt="Gallery photo 4" loading="lazy">
+                    <div class="gallery__overlay">
+                        <button class="gallery__btn" aria-label="View larger image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery__item" data-index="4">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop"
+                        alt="Gallery photo 5" loading="lazy">
+                    <div class="gallery__overlay">
+                        <button class="gallery__btn" aria-label="View larger image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery__item" data-index="5">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=400&fit=crop"
+                        alt="Gallery photo 6" loading="lazy">
+                    <div class="gallery__overlay">
+                        <button class="gallery__btn" aria-label="View larger image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 9. THANK YOU SECTION ==================== -->
+    <section class="thank-you" id="thank-you">
+        <div class="container">
+            <div class="thank-you__content scroll-animate" data-animation="fade-in">
+                <h2 class="thank-you__title">Thank You</h2>
+
+                <p class="thank-you__message">
+                    Thank you for being a part of our special day and for blessing our union with your presence and
+                    love.
+                </p>
+
+                <div class="thank-you__heart animate-pulse">❤️</div>
+
+                <p class="thank-you__names">
+                    <strong>Anh Chàng</strong> & <strong>Em Yêu</strong>
+                </p>
+
+                <p class="thank-you__date">
+                    December 24, 2025
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 10. FOOTER ==================== -->
+    <footer class="footer scroll-animate" data-animation="fade-in">
+        <div class="container">
+            <p class="footer__quote">
+                ✿ Love is patient, love is kind ✿
+            </p>
+            <p class="footer__copyright">
+                © 2025 Our Wedding. All moments are cherished forever.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox__overlay"></div>
+        <div class="lightbox__content">
+            <button class="lightbox__close" aria-label="Close">✕</button>
+            <img id="lightbox-image" src="" alt="Full size gallery image" class="lightbox__image">
+            <div class="lightbox__nav">
+                <button class="lightbox__prev" aria-label="Previous image">❮</button>
+                <button class="lightbox__next" aria-label="Next image">❯</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="main.js" defer></script>
+</body>
+
+</html>
