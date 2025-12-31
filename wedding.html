@@ -4,194 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        :root {
-            --primary: #fff;
-            --bg-color: rgb(218, 231, 233);
-            --bg-envelope-color: #f4e1d2;
-            --envelope-border-color: #d3bfa6;
-            --envelope-tab: #e8cbb7;
-            --envelope-cover: #e6cfa7;
-            --shadow-color: rgba(0, 0, 0, 0.2);
-            --txt-color: #444;
-            --heart-color: #ff4d6d;
-        }
 
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: var(--bg-color);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container .envelop-wrapper {
-            background-color: var(--bg-envelope-color);
-            box-shadow: 0 0 40px var(--shadow-color);
-        }
-
-        .container .envelop-wrapper .envelope {
-            width: 300px;
-            height: 240px;
-            position: relative;
-        }
-
-        .envelop-wrapper>.envelope::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            z-index: 2;
-            border-top: 140px solid var(--envelope-tab);
-            border-left: 150px solid transparent;
-            border-right: 150px solid transparent;
-            transform-origin: top;
-            transition: all 0.7s ease-in-out 1.2s;
-        }
-
-        .container .envelop-wrapper .envelope::after {
-            content: '';
-            position: absolute;
-            z-index: 2;
-            width: 0;
-            height: 0;
-            border-top: 140px solid transparent;
-            border-right: 150px solid var(--envelope-cover);
-            border-bottom: 100px solid var(--envelope-cover);
-            border-left: 150px solid var(--envelope-cover);
-        }
-
-        .envelope>.letter {
-            width: 50%;
-            height: 90%;
-            background-color: var(--primary);
-            position: absolute;
-            right: 21%;
-            bottom: 0;
-            text-align: center;
-            box-shadow: 0 0 20px var(--shadow-color);
-            transition: all 1.5s ease-in-out;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid var(--envelope-border-color);
-        }
-
-        .container .envelop-wrapper .envelope .letter .img {
-            color: var(--txt-color);
-            text-align: left;
-            font-size: 18px;
-        }
-
-        .heart {
-            position: absolute;
-            top: 51%;
-            left: 50%;
-            width: 20px;
-            height: 20px;
-            background-color: var(--heart-color);
-            z-index: 4;
-            transform: translate(-50%, 20%) rotate(45deg);
-            transition: transform 0.5s ease-in-out;
-            box-shadow: 0 1 15px var(--shadow-color);
-            cursor: pointer;
-        }
-
-        .heart::before,
-        .heart::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: var(--heart-color);
-            border-radius: 50%;
-        }
-
-        .heart::before {
-            top: -8.5px;
-        }
-
-        .heart::after {
-            left: -8.5px;
-        }
-
-        .flap .heart {
-            transform: rotate(135deg);
-            transition-delay: 0.3s;
-        }
-
-        .flap .envelope::before {
-            transform: rotateX(180deg);
-            transition-delay: 0.7s;
-            z-index: 0;
-        }
-
-        .flap .envelope .letter {
-            bottom: 100px;
-            transition-delay: 1.5s;
-            transform: scale(1.5);
-        }
-
-        .envelope::before,
-        .envelope::after {
-            filter: drop-shadow(0 0 0.5px #b30000) drop-shadow(0 1px 1px #b30000);
-        }
-
-        .img img {
-            width: 100%;
-            height: auto;
-        }
-
-        .scale-up-center {
-            animation: scale 2s ease-in-out infinite;
-        }
-
-        .scale-open{
-            animation: scaleOpen 0.8s cubic-bezier(.22,1.2,.36,1) forwards;
-        }
-
-        @keyframes scale {
-            0% {
-                transform: scale(1);
-            }
-
-            60% {
-                transform: scale(1.05);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        @keyframes scaleOpen {
-            0% {
-                transform: scale(1);
-            }
-
-            60% {
-                transform: scale(1.1);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-    </style>
+    <title>Đức Tuyên ❤️ Tố Quyên</title>
+    
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./css/wedding.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="envelop-wrapper scale-up-center">
+        <div class="envelope-wrapper scale-up-center">
             <div class="envelope">
                 <div class="letter">
                     <div class="img">
@@ -203,22 +25,7 @@
         </div>
     </div>
 
-    <script>
-        const heart = document.querySelector('.heart');
-        const envelopWrapper = document.querySelector('.envelop-wrapper');
-
-        heart.addEventListener('click', () => {
-            envelopWrapper.classList.toggle('flap');
-            
-            if(envelopWrapper.classList.contains('flap')){
-                envelopWrapper.classList.remove('scale-up-center');
-                envelopWrapper.classList.add('scale-open');
-            } else {
-                envelopWrapper.classList.remove('scale-open');
-                envelopWrapper.classList.add('scale-up-center');
-            }
-        });
-    </script>
+    <script src="./js/wedding.js" defer></script>
 </body>
 
 </html>
