@@ -1,180 +1,334 @@
 :root {
-            --primary: #fff;
-            --bg-color: rgb(218, 231, 233);
-            --bg-envelope-color: #f4e1d2;
-            --envelope-border-color: #d3bfa6;
-            --envelope-tab: #e8cbb7;
-            --envelope-cover: #e6cfa7;
-            --shadow-color: rgba(0, 0, 0, 0.2);
-            --txt-color: #444;
-            --heart-color: #ff4d6d;
-        }
+    --primary: #fff;
+    --bg-color: rgb(218, 231, 233);
+    --bg-envelope-color: #f4e1d2;
+    --envelope-border-color: #d3bfa6;
+    --envelope-tab: #cf1c1c;
+    --envelope-cover: #b60202;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --txt-color: #444;
+    --heart-color: #d45b22;
+}
 
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: var(--bg-color);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    font-family: 'Cormorant Garamond', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        .container {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+.container {
+    height: 100vh;
+    max-width: 720px !important;
+}
 
-        .container .envelope-wrapper {
-            background-color: var(--bg-envelope-color);
-            box-shadow: 0 0 40px var(--shadow-color);
-        }
+.container {
+    background: url(../images/bg-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-        .container .envelope-wrapper .envelope {
-            width: 300px;
-            height: 240px;
-            position: relative;
-        }
+.section-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        .envelope-wrapper>.envelope::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            z-index: 2;
-            border-top: 140px solid var(--envelope-tab);
-            border-left: 150px solid transparent;
-            border-right: 150px solid transparent;
-            transform-origin: top;
-            transition: all 0.7s ease-in-out 1.2s;
-        }
+.section-1 .envelope-wrapper {
+    background-color: var(--bg-envelope-color);
+    box-shadow: 0 0 40px var(--shadow-color);
+}
 
-        .container .envelope-wrapper .envelope::after {
-            content: '';
-            position: absolute;
-            z-index: 2;
-            width: 0;
-            height: 0;
-            border-top: 140px solid transparent;
-            border-right: 150px solid var(--envelope-cover);
-            border-bottom: 100px solid var(--envelope-cover);
-            border-left: 150px solid var(--envelope-cover);
-        }
+.section-1 .envelope-wrapper .envelope {
+    width: 300px;
+    height: 240px;
+    position: relative;
+}
 
-        .envelope>.letter {
-            width: 50%;
-            height: 90%;
-            background-color: var(--primary);
-            position: absolute;
-            right: 21%;
-            bottom: 0;
-            text-align: center;
-            box-shadow: 0 0 20px var(--shadow-color);
-            transition: all 1.5s ease-in-out;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid var(--envelope-border-color);
-        }
+.envelope-wrapper>.envelope::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    border-top: 140px solid var(--envelope-tab);
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    transform-origin: top;
+    transition: all 0.7s ease-in-out 1.2s;
+}
 
-        .container .envelop-wrapper .envelope .letter .img {
-            color: var(--txt-color);
-            text-align: left;
-            font-size: 18px;
-        }
+.section-1 .envelope-wrapper .envelope::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    border-top: 140px solid transparent;
+    border-right: 150px solid var(--envelope-cover);
+    border-bottom: 100px solid var(--envelope-cover);
+    border-left: 150px solid var(--envelope-cover);
+}
 
-        .heart {
-            position: absolute;
-            top: 51%;
-            left: 50%;
-            width: 20px;
-            height: 20px;
-            background-color: var(--heart-color);
-            z-index: 4;
-            transform: translate(-50%, 20%) rotate(45deg);
-            transition: transform 0.5s ease-in-out;
-            box-shadow: 0 1 15px var(--shadow-color);
-            cursor: pointer;
-        }
+.envelope>.letter {
+    width: 50%;
+    height: 90%;
+    background-color: var(--primary);
+    position: absolute;
+    right: 25%;
+    bottom: 0;
+    text-align: center;
+    box-shadow: 0 0 20px var(--shadow-color);
+    transition: all 1.5s ease-in-out;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #e23200;
+}
 
-        .heart::before,
-        .heart::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: var(--heart-color);
-            border-radius: 50%;
-        }
+.section-1 .envelope-wrapper .envelope .letter .img {
+    color: var(--txt-color);
+    text-align: left;
+    font-size: 18px;
+}
 
-        .heart::before {
-            top: -8.5px;
-        }
+.heart {
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: var(--heart-color);
+    z-index: 4;
+    transform: translate(-50%, 20%) rotate(45deg);
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 1 15px var(--shadow-color);
+    cursor: pointer;
+}
 
-        .heart::after {
-            left: -8.5px;
-        }
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--heart-color);
+    border-radius: 50%;
+}
 
-        .flap .heart {
-            transform: rotate(135deg);
-            transition-delay: 0.3s;
-        }
+.heart::before {
+    top: -8.5px;
+}
 
-        .flap .envelope::before {
-            transform: rotateX(180deg);
-            transition-delay: 0.7s;
-            z-index: 0;
-        }
+.heart::after {
+    left: -8.5px;
+}
 
-        .flap .envelope .letter {
-            bottom: 100px;
-            transition-delay: 1.5s;
-            transform: scale(1.5);
-        }
+.flap .heart {
+    transform: rotate(135deg);
+    transition-delay: 0.3s;
+}
 
-        .envelope::before,
-        .envelope::after {
-            filter: drop-shadow(0 0 0.5px #b30000) drop-shadow(0 1px 1px #b30000);
-        }
+.flap .envelope::before {
+    transform: rotateX(180deg);
+    transition-delay: 0.7s;
+    z-index: 0;
+}
 
-        .img img {
-            width: 100%;
-            height: auto;
-        }
+.flap .envelope .letter {
+    bottom: 100px;
+    transition-delay: 1.5s;
+    transform: scale(1.7);
+}
 
-        .scale-up-center {
-            animation: scale 2s ease-in-out infinite;
-        }
+.envelope::before,
+.envelope::after {
+    filter: drop-shadow(0 0 1px #0e0000) drop-shadow(0 1px 2px #ff0202c4);
+}
 
-        .scale-open{
-            animation: scaleOpen 0.8s cubic-bezier(.22,1.2,.36,1) forwards;
-        }
+.img img {
+    width: 100%;
+    height: auto;
+}
 
-        @keyframes scale {
-            0% {
-                transform: scale(1);
-            }
+.scale-up-center {
+    animation: scale 2s ease-in-out infinite;
+}
 
-            60% {
-                transform: scale(1.05);
-            }
+.scale-open {
+    animation: scaleOpen 0.8s cubic-bezier(.22, 1.2, .36, 1) forwards;
+}
 
-            100% {
-                transform: scale(1);
-            }
-        }
+.title {
+    font-size: 2rem;
+    text-align: center;
+}
 
-        @keyframes scaleOpen {
-            0% {
-                transform: scale(1);
-            }
+.title span {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+}
 
-            60% {
-                transform: scale(1.1);
-            }
+.chu-hy img {
+    width: 200px;
+}
 
-            100% {
-                transform: scale(1);
-            }
-        }
+.hd {
+    text-align: center;
+    font-size: 1.2rem;
+    color: gray;
+}
+
+.name {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-size: 3rem;
+    font-family: 'Great Vibes', cursive;
+    overflow: hidden;
+}
+
+/* Chú rể - từ trái vào */
+.chu-re {
+    opacity: 0;
+    animation: groomIn 1.5s ease-out forwards;
+}
+
+/* Trái tim - từ trong ra */
+.trai-tim {
+    opacity: 0;
+    animation: heartPop 1.5s ease-out forwards;
+}
+
+/* Cô dâu - từ phải vào */
+.co-dau {
+    opacity: 0;
+    animation: brideIn 1.5s ease-out forwards;
+}
+
+/* Đường kẻ trên & dưới */
+.name::before,
+.name::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #c9a24d,
+        transparent
+    );
+}
+
+/* Đường trên */
+.name::before {
+    top: 0;
+}
+
+/* Đường dưới */
+.name::after {
+    bottom: 0;
+}
+
+/* KEYFRAMES */
+@keyframes groomIn {
+    0% {
+        transform: translateX(-80px);
+        opacity: 0;
+    }
+
+    40% {
+        transform: translateX(20px);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateX(-10px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes brideIn {
+    0% {
+        transform: translateX(80px);
+        opacity: 0;
+    }
+
+    40% {
+        transform: translateX(-20px);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateX(10px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes heartPop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    40% {
+        transform: scale(1.4);
+        opacity: 1;
+    }
+
+    80% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleOpen {
+    0% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const heart = document.querySelector('.heart');
     const envelopWrapper = document.querySelector('.envelope-wrapper');
+    const chuHy = document.querySelector('.chu-hy');
 
     heart.addEventListener('click', () => {
         envelopWrapper.classList.toggle('flap');
