@@ -187,11 +187,12 @@ body {
     font-family: 'Great Vibes', cursive;
     overflow: hidden;
 }
-.name .chu-re{
+
+.name .chu-re {
     text-align: end;
 }
 
-.name .co-dau{
+.name .co-dau {
     text-align: start;
 }
 
@@ -213,6 +214,7 @@ body {
 .co-dau {
     justify-self: start;
 }
+
 /* Chú rể - từ trái vào */
 .chu-re {
     opacity: 0;
@@ -259,117 +261,128 @@ body {
     bottom: 0;
 }
 
-.arrow-down{
+.arrow-down {
     text-align: center;
     animation: arrowBounce 1.6s infinite;
 }
 
-@keyframes arrowBounce {
-    0% {
-        transform: translateY(0);
-        opacity: 0.4;
+/*thong tin 2 gia dinh: START*/
+.thong-tin-2-gia-dinh {
+    font-size: 1.8rem;
+}
+
+.thong-tin-2-gia-dinh .thong-tin {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.thong-tin-2-gia-dinh .thong-tin .dia-chi {
+    font-weight: 500;
+    color: gray;
+}
+
+.thong-tin-2-gia-dinh {
+    position: relative;
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hide {
+    height: calc(1.5em * 3);
+    background: white;
+    position: absolute;
+    top: 0;
+    width: 20%;
+    margin-left: -40px;
+}
+
+/* Đường kẻ bên trái */
+.thong-tin-2-gia-dinh::before {
+    content: "";
+    position: absolute;
+    left: 36px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--envelope-cover);
+    /* màu vàng nhạt sang trọng */
+}
+
+/* Thư mời cưới */
+.thu-moi-cuoi {
+    background: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.5em;
+    text-align: start;
+    width: fit-content;
+    margin-left: -25px;
+    z-index: 1;
+}
+
+/* Animation mặc định (ẩn) */
+.thu-moi-cuoi,
+.thong-tin {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.8s ease;
+}
+
+/* Khi active */
+.thu-moi-cuoi.show,
+.thong-tin.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.dia-chi {
+    opacity: 0.8;
+}
+
+.img-chu-hy {
+    width: 80px;
+    height: 250px;
+    background-color: var(--envelope-cover);
+    position: absolute;
+    top: 0;
+    right: 10%;
+}
+
+.img-chu-hy {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+.img-chu-hy {
+    animation: pop 1s forwards;
+}
+
+.img-chu-hy img {
+    width: 100%;
+    filter: grayscale(100%) brightness(10) contrast(2);
+}
+
+.img-chu-hy .dot {
+    background-color: whitesmoke;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+@media (max-width: 450px) {
+    .img-chu-hy {
+        width: 70px;
+        height: 220px;
     }
-    50% {
-        transform: translateY(10px);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 0.4;
+}
+@media (max-width: 399px) {
+    .img-chu-hy {
+        display: none;
     }
 }
 
-/* KEYFRAMES */
-@keyframes groomIn {
-    0% {
-        transform: translateX(-80px);
-        opacity: 0;
-    }
-
-    40% {
-        transform: translateX(20px);
-        opacity: 1;
-    }
-
-    80% {
-        transform: translateX(-10px);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes brideIn {
-    0% {
-        transform: translateX(80px);
-        opacity: 0;
-    }
-
-    40% {
-        transform: translateX(-20px);
-        opacity: 1;
-    }
-
-    80% {
-        transform: translateX(10px);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes heartPop {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-
-    40% {
-        transform: scale(1.4);
-        opacity: 1;
-    }
-
-    80% {
-        transform: scale(0.9);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes scale {
-    0% {
-        transform: scale(1);
-    }
-
-    60% {
-        transform: scale(1.05);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes scaleOpen {
-    0% {
-        transform: scale(1);
-    }
-
-    60% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
+/*thong tin 2 gia dinh: END*/

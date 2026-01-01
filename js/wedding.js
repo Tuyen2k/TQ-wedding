@@ -18,12 +18,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const items = document.querySelectorAll(".thu-moi-cuoi, .thong-tin");
 
-  arrowDown.addEventListener("click", () => {
+  let isThongTinShown = false;
+
+  const showThongTin = () => {
+    if (isThongTinShown) return;
+
     sectionThongTin.classList.remove("d-none");
+    isThongTinShown = true;
+  };
+
+  // 👉 Click arrow
+  arrowDown.addEventListener("click", () => {
+    showThongTin();
+
+    const y = sectionThongTin.getBoundingClientRect().top + window.pageYOffset - 600;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
   });
+
+  // 👉 Scroll để hiện section
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!arrowDown.classList.contains("d-none") && !isThongTinShown) {
+        showThongTin();
+      }
+    },
+    { once: true } // chỉ chạy 1 lần
+  );
 
   const observer = new IntersectionObserver(
     (entries) => {
+      if (!arrowDown.classList.contains("d-none")) {
+        sectionThongTin.classList.remove("d-none");
+      }
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const index = [...items].indexOf(entry.target);
@@ -40,4 +71,5 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   items.forEach((el) => observer.observe(el));
+
 });
