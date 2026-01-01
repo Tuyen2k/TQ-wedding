@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let isThongTinShown = false;
 
   const showThongTin = () => {
+    console.log("isThongTinShown: ", isThongTinShown);
+    
     if (isThongTinShown) return;
 
     sectionThongTin.classList.remove("d-none");
@@ -46,15 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!arrowDown.classList.contains("d-none") && !isThongTinShown) {
         showThongTin();
       }
-    },
-    { once: true } // chỉ chạy 1 lần
+    }
   );
 
   const observer = new IntersectionObserver(
     (entries) => {
-      if (!arrowDown.classList.contains("d-none")) {
-        sectionThongTin.classList.remove("d-none");
-      }
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const index = [...items].indexOf(entry.target);
