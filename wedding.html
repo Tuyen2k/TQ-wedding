@@ -62,9 +62,7 @@
             <div class="envelope-wrapper scale-up-center">
                 <div class="envelope">
                     <div class="letter">
-                        <div class="img">
-                            <img src="./images/img-letter-wrap.JPG" alt="">
-                        </div>
+                        <img src="./images/img-letter-wrap.JPG" alt="">
                     </div>
                 </div>
                 <div class="heart"></div>
@@ -74,12 +72,12 @@
         <div class="hd mt-4 mb-5" id="note-click-heart">--Nhấp vào trái tim để mở thiệp--</div>
 
         <div class="name mt-4 py-2 d-none" id="name-co__dau-chu__re">
-            <span class="chu-re">Đức <br/> Tuyên</span>
+            <span class="chu-re">Đức <br /> Tuyên</span>
             <span class="trai-tim"> ❤️ </span>
-            <span class="co-dau">Tổ <br/> Quyên</span>
+            <span class="co-dau">Tổ <br /> Quyên</span>
         </div>
 
-        <div class="arrow-down mt-3 mb-5 d-none" id="arrow-down__hint">
+        <div class="arrow-down mt-3 mb-6 d-none" id="arrow-down__hint">
             <?xml version="1.0" encoding="iso-8859-1"?>
             <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
             <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -96,8 +94,143 @@
                 </g>
             </svg>
         </div>
+
+        <section class="thong-tin-2-gia-dinh mb-5 d-none" id="section-thong-tin">
+            <div class="hide mt-5"></div>
+            <div class="thu-moi-cuoi mt-5">
+                Thư <br />
+                Mời <br />
+                Cưới
+            </div>
+
+            <div class="thong-tin">
+                <i>Nhà Trai</i> <br />
+                Ông Nguyễn Đức Tình <br />
+                Bà Nguyễn Thị Giang <br />
+                <span class="dia-chi">
+                    Ba Vì, Hà Nội
+                </span>
+            </div>
+
+            <div class="thong-tin">
+                <i>Nhà Gái</i><br />
+                Bà Đỗ Thị Thoan <br />
+                <span class="dia-chi">
+                    Móng Cái 3, Quảng Ninh
+                </span>
+            </div>
+
+            <div class="img-chu-hy">
+                <img src="./images/chu-hy-do.png" alt="chu hy">
+                <div class="dot mt-3"></div>
+            </div>
+        </section>
+
     </div>
 
+    <style>
+        .thong-tin-2-gia-dinh {
+            font-size: 1.8rem;
+        }
+
+        .thong-tin-2-gia-dinh .thong-tin {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .thong-tin-2-gia-dinh .thong-tin .dia-chi {
+            font-weight: 500;
+            color: gray;
+        }
+
+        .thong-tin-2-gia-dinh {
+            position: relative;
+            padding-left: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .hide {
+            height: calc(1.5em * 3);
+            background: white;
+            position: absolute;
+            top: 0;
+            width: 20%;
+            margin-left: -40px;
+        }
+
+        /* Đường kẻ bên trái */
+        .thong-tin-2-gia-dinh::before {
+            content: "";
+            position: absolute;
+            left: 36px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: var(--envelope-cover);
+            /* màu vàng nhạt sang trọng */
+        }
+
+        /* Thư mời cưới */
+        .thu-moi-cuoi {
+            background: #fff;
+            font-weight: 600;
+            letter-spacing: 2px;
+            line-height: 1.5em;
+            text-align: start;
+            width: fit-content;
+            margin-left: -25px;
+            z-index: 1;
+        }
+
+        /* Animation mặc định (ẩn) */
+        .thu-moi-cuoi,
+        .thong-tin {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: all 0.8s ease;
+        }
+
+        /* Khi active */
+        .thu-moi-cuoi.show,
+        .thong-tin.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .dia-chi {
+            opacity: 0.8;
+        }
+
+        .img-chu-hy {
+            width: 80px;
+            height: 250px;
+            background-color: var(--envelope-cover);
+            position: absolute;
+            top: 0;
+            right: 10%;
+        }
+
+        .img-chu-hy {
+            display: flex;
+            align-items: center;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+        }
+
+        .img-chu-hy img {
+            width: 100%;
+            filter: grayscale(100%) brightness(10) contrast(2);
+        }
+
+        .img-chu-hy .dot {
+            background-color: whitesmoke;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+    </style>
 
     <script src="./js/wedding.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

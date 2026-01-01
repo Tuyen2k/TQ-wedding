@@ -27,10 +27,10 @@ body {
 }
 
 .container {
-    background: url(../images/bg-1.jpg);
+    /* background: url(../images/bg-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 .section-1 {
@@ -77,16 +77,12 @@ body {
 .envelope>.letter {
     width: 50%;
     height: 90%;
-    background-color: var(--primary);
     position: absolute;
     right: 25%;
     bottom: 10px;
     text-align: center;
     box-shadow: 0 0 20px var(--shadow-color);
     transition: all 1.5s ease-in-out;
-    padding: 2px;
-    border-radius: 5px;
-    border: 1px solid #e23200;
 }
 
 .section-1 .envelope-wrapper .envelope .letter .img {
@@ -146,10 +142,12 @@ body {
 
 .envelope::before,
 .envelope::after {
-    filter: drop-shadow(0 0 1px #0e0000) drop-shadow(0 1px 2px #ff0202c4);
+    filter: drop-shadow(0 0 2px #ffffff) drop-shadow(0 1px 2px #ff0202c4);
 }
 
-.img img {
+.letter img {
+    border-radius: 5px;
+    border: 2px solid #e23200;
     width: 100%;
     height: auto;
 }
