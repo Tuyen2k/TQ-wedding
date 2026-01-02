@@ -21,35 +21,30 @@ document.addEventListener("DOMContentLoaded", () => {
   let isThongTinShown = false;
 
   const showThongTin = () => {
-    console.log("isThongTinShown: ", isThongTinShown);
-    
-    if (isThongTinShown) return;
-
     sectionThongTin.classList.remove("d-none");
     isThongTinShown = true;
   };
 
+  function onUserIntent() {
+    if (arrowDown.classList.contains("d-none")) return;
+    if (isThongTinShown) return;
+
+    showThongTin();
+  }
+
   // 👉 Click arrow
   arrowDown.addEventListener("click", () => {
-    showThongTin();
-
-    const y = sectionThongTin.getBoundingClientRect().top + window.pageYOffset - 600;
-
-    window.scrollTo({
-      top: y,
+    onUserIntent();
+    
+    sectionThongTin.scrollIntoView({
       behavior: "smooth",
+      block: "start"
     });
   });
 
   // 👉 Scroll để hiện section
-  window.addEventListener(
-    "scroll",
-    () => {
-      if (!arrowDown.classList.contains("d-none") && !isThongTinShown) {
-        showThongTin();
-      }
-    }
-  );
+  window.addEventListener("wheel", onUserIntent, { passive: true });
+  window.addEventListener("touchmove", onUserIntent, { passive: true });
 
   const observer = new IntersectionObserver(
     (entries) => {

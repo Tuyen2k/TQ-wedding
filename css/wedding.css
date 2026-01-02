@@ -361,8 +361,14 @@ body {
     justify-content: space-between;
 }
 
-.img-chu-hy {
-    animation: pop 1s forwards;
+.img-chu-hy img {
+    will-change: transform, opacity;
+}
+
+.img-chu-hy img {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .img-chu-hy img {
