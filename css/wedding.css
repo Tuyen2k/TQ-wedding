@@ -33,6 +33,7 @@ body {
     background-size: cover; */
 }
 
+/*START section-1*/
 .section-1 {
     display: flex;
     justify-content: center;
@@ -44,6 +45,7 @@ body {
     box-shadow: 0 0 40px var(--shadow-color);
 }
 
+/* Envelope */
 .section-1 .envelope-wrapper .envelope {
     width: 300px;
     height: 240px;
@@ -91,6 +93,7 @@ body {
     text-align: left;
     font-size: 18px;
 }
+/*END envelope */
 
 .heart {
     position: absolute;
@@ -148,7 +151,7 @@ body {
 
 .letter img {
     border-radius: 5px;
-    border: 2px solid #e23200;
+    /* border: 2px solid #e23200; */
     width: 100%;
     height: auto;
 }
@@ -267,6 +270,7 @@ body {
     text-align: center;
     animation: arrowBounce 1.6s infinite;
 }
+/* End section-1 */
 
 /*thong tin 2 gia dinh: START*/
 .thong-tin-2-gia-dinh {
