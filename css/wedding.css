@@ -93,6 +93,7 @@ body {
     text-align: left;
     font-size: 18px;
 }
+
 /*END envelope */
 
 .heart {
@@ -270,6 +271,7 @@ body {
     text-align: center;
     animation: arrowBounce 1.6s infinite;
 }
+
 /* End section-1 */
 
 /*thong tin 2 gia dinh: START*/
@@ -433,21 +435,149 @@ body {
     font-family: 'Great Vibes', cursive;
 }
 
-.intro-co-dau-chu-re .thong-tin{
+.intro-co-dau-chu-re .thong-tin {
     opacity: 0;
 }
 
-.intro-co-dau-chu-re .thong-tin.show.anim-left {
-    animation: fadeInLeft 1.2s ease forwards;
+.thong-tin.show.anim-left {
+    animation: fadeInLeft 1s ease forwards;
 }
 
-.intro-co-dau-chu-re .thong-tin.show.anim-right {
-    animation: fadeInRight 1.2s ease forwards;
+.thong-tin.show.anim-right {
+    animation: fadeInRight 1s ease forwards;
 }
 
-.intro-co-dau-chu-re .intro-img.thong-tin.show {
-    animation: fadeInUp 1.2s ease forwards;
+.thong-tin.show.in-up {
+    animation: fadeInUp 1s ease forwards;
 }
 
 /*Intro cô dâu chú rể: END*/
 
+/* Thời gian địa điểm tổ chức: START */
+.section-info-dam-cuoi .thong-tin {
+    opacity: 0;
+}
+
+.section-info-dam-cuoi .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.section-info-dam-cuoi .thong-tin-dam-cuoi {
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+.section-info-dam-cuoi .thong-tin-dam-cuoi .title {
+    font-size: 1.2rem;
+}
+
+.section-info-dam-cuoi .thong-tin-dam-cuoi #time {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.section-info-dam-cuoi .thoi-gian {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-info-dam-cuoi .thoi-gian i {
+    opacity: 0.8;
+}
+
+.section-info-dam-cuoi .date-container .line {
+    width: 2px;
+    height: 36px;
+    background-color: black;
+}
+
+.section-info-dam-cuoi .date-container .day {
+    font-size: 3rem;
+    font-family: 'Great Vibes', cursive;
+}
+
+.section-info-dam-cuoi .date-container .month,
+.section-info-dam-cuoi .date-container .year {
+    min-width: 70px;
+    font-size: 1.2rem;
+}
+
+.section-info-dam-cuoi .thoi-gian .noi-to-chuc {
+    text-align: center;
+}
+
+.section-info-dam-cuoi .thoi-gian .noi-to-chuc .chi-tiet {
+    font-weight: 500;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.calendar-container {
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.calendar {
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid var(--envelope-cover);
+}
+
+.calendar-header {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.calendar-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.calendar-weekdays,
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.calendar-weekdays div {
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 0;
+    color: #555;
+}
+
+.calendar-days div {
+    padding: 10px 0;
+    margin: 4px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.calendar-days .empty {
+    background: transparent;
+}
+
+.heart-day {
+    position: relative;
+    color: #d6336c;
+    font-weight: 600;
+}
+
+.heart-day svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.heart-day svg {
+    animation: scaleOpen 1.5s ease-in-out infinite;
+}
+
+/*Thời gian địa điểm tổ chức: END*/
