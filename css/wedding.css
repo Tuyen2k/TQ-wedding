@@ -208,34 +208,34 @@ body {
     width: 100%;
 }
 
-.chu-re {
+.name .chu-re {
     justify-self: end;
 }
 
-.trai-tim {
+.name .trai-tim {
     justify-self: center;
 }
 
-.co-dau {
+.name .co-dau {
     justify-self: start;
 }
 
 /* Chú rể - từ trái vào */
-.chu-re {
+.name .chu-re {
     opacity: 0;
     animation: groomIn 1.5s ease-out forwards;
     animation-delay: 0.5s;
 }
 
 /* Trái tim - từ trong ra */
-.trai-tim {
+.name .trai-tim {
     opacity: 0;
     animation: heartPop 1.5s ease-out forwards;
     animation-delay: 0.5s;
 }
 
 /* Cô dâu - từ phải vào */
-.co-dau {
+.name .co-dau {
     opacity: 0;
     animation: brideIn 1.5s ease-out forwards;
     animation-delay: 0.5s;
@@ -329,8 +329,8 @@ body {
 }
 
 /* Animation mặc định (ẩn) */
-.thu-moi-cuoi,
-.thong-tin {
+.thong-tin-2-gia-dinh .thu-moi-cuoi,
+.thong-tin-2-gia-dinh .thong-tin {
     opacity: 0;
     transform: translateX(60px);
     transition: all 0.8s ease;
@@ -338,8 +338,8 @@ body {
 }
 
 /* Khi active */
-.thu-moi-cuoi.show,
-.thong-tin.show {
+.thong-tin-2-gia-dinh .thu-moi-cuoi.show,
+.thong-tin-2-gia-dinh .thong-tin.show {
     opacity: 1;
     transform: translateX(0);
 }
@@ -400,7 +400,9 @@ body {
     .img-chu-hy img {
         padding: 5px;
     }
+}
 
+@media (max-width: 450px) {
     .thong-tin-2-gia-dinh {
         font-size: 1.5rem;
     }
@@ -411,3 +413,41 @@ body {
 }
 
 /*thong tin 2 gia dinh: END*/
+
+/*Intro cô dâu chú rể: START*/
+.intro-co-dau-chu-re {
+    font-size: 1.8rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.intro-co-dau-chu-re .thong-tin.title {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.intro-co-dau-chu-re span.thong-tin {
+    font-size: 2rem;
+    font-family: 'Great Vibes', cursive;
+}
+
+.intro-co-dau-chu-re .thong-tin{
+    opacity: 0;
+}
+
+.intro-co-dau-chu-re .thong-tin.show.anim-left {
+    animation: fadeInLeft 1.2s ease forwards;
+}
+
+.intro-co-dau-chu-re .thong-tin.show.anim-right {
+    animation: fadeInRight 1.2s ease forwards;
+}
+
+.intro-co-dau-chu-re .intro-img.thong-tin.show {
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+/*Intro cô dâu chú rể: END*/
+

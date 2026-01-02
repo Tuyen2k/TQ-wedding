@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameContainer = document.querySelector("#name-co__dau-chu__re");
   const arrowDown = document.querySelector("#arrow-down__hint");
   const sectionThongTin = document.querySelector("#section-thong-tin");
+  const sectionIntroCoDauChuRe = document.querySelector("#section-intro-co-dau-chu-re");
 
   heart.addEventListener("click", () => {
     const isOpen = envelopWrapper.classList.toggle("flap");
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const showThongTin = () => {
     sectionThongTin.classList.remove("d-none");
+    sectionIntroCoDauChuRe.classList.remove("d-none");
     isThongTinShown = true;
   };
 
@@ -35,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 👉 Click arrow
   arrowDown.addEventListener("click", () => {
     onUserIntent();
-    
+
     sectionThongTin.scrollIntoView({
       behavior: "smooth",
       block: "start"
