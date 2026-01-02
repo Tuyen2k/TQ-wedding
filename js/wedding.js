@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameContainer = document.querySelector("#name-co__dau-chu__re");
   const arrowDown = document.querySelector("#arrow-down__hint");
   const sectionThongTin = document.querySelector("#section-thong-tin");
-  const sectionIntroCoDauChuRe = document.querySelector("#section-intro-co-dau-chu-re");
+  const sectionIntroCoDauChuRe = document.querySelector(
+    "#section-intro-co-dau-chu-re"
+  );
   const sectionInfoDamCuoi = document.querySelector("#section-info-dam-cuoi");
   const sectionMap = document.querySelector("#section-map");
 
@@ -44,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sectionThongTin.scrollIntoView({
       behavior: "smooth",
-      block: "start"
+      block: "start",
     });
   });
 
@@ -65,7 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.3,
+      root: null,
+      rootMargin: "0px 0px -80px 0px",
+      threshold: 0.1,
     }
   );
 

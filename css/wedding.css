@@ -645,4 +645,9 @@ body {
     font-weight: 500;
 }
 
+.btn-chi-duong a{
+    animation: scaleOpen 2s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
 /*Map END*/
