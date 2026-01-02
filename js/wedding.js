@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sectionThongTin = document.querySelector("#section-thong-tin");
   const sectionIntroCoDauChuRe = document.querySelector("#section-intro-co-dau-chu-re");
   const sectionInfoDamCuoi = document.querySelector("#section-info-dam-cuoi");
+  const sectionMap = document.querySelector("#section-map");
 
   heart.addEventListener("click", () => {
     const isOpen = envelopWrapper.classList.toggle("flap");
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sectionThongTin.classList.remove("d-none");
     sectionIntroCoDauChuRe.classList.remove("d-none");
     sectionInfoDamCuoi.classList.remove("d-none");
+    sectionMap.classList.remove("d-none");
     isThongTinShown = true;
   };
 
@@ -88,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      rootMargin: "100px",
+      rootMargin: "200px",
       threshold: 0.1,
     }
   );

@@ -580,4 +580,69 @@ body {
     animation: scaleOpen 1.5s ease-in-out infinite;
 }
 
+@media (max-width: 400px) {
+    .thong-tin-dam-cuoi .thoi-gian .date-container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
 /*Thời gian địa điểm tổ chức: END*/
+
+/*Map START*/
+.section-map .thong-tin {
+    opacity: 0;
+}
+
+.map-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-map .dia-diem {
+    background-color: var(--envelope-cover);
+    color: #fff;
+    position: relative;
+}
+
+.section-map .dia-diem .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.section-map .dia-diem .icon-box {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.section-map p span {
+    font-size: 1rem;
+}
+
+.section-map p span.noi-to-chuc-tiec {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.section-map p span.chi-tiet {
+    font-weight: 600;
+    font-style: italic;
+    color: grey;
+}
+
+.btn-chi-duong a {
+    text-decoration: auto;
+    background: var(--envelope-cover);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 20px;
+    width: fit-content;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/*Map END*/

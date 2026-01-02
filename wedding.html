@@ -40,18 +40,13 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-
-    <style>
-
-
-
-
-    </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="mt-5 mt-lg-3"></div>
+    <div class="container text-shadow">
+        <div class="mt-5 mt-lg-3">
+            <img src="./images/border-header-1.jfif" alt="">
+        </div>
         <div class="title mb-3">
             Thiệp
             <br />
@@ -276,14 +271,38 @@
             </div>
         </section>
 
-        <section class="section-map py-5">
-            <h3 class="text-center mb-4">📍 Địa điểm tổ chức</h3>
+        <section class="section-map mb-5 d-none" id="section-map">
+            <div class="d-flex dia-diem justify-content-center mb-4 py-1">
+                <div class="icon-box thong-tin anim-right">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg width="30px" height="30px" viewBox="0 0 1024 1024" fill="#fff" class="icon" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M512 1012.8c-253.6 0-511.2-54.4-511.2-158.4 0-92.8 198.4-131.2 283.2-143.2h3.2c12 0 22.4 8.8 24 20.8 0.8 6.4-0.8 12.8-4.8 17.6-4 4.8-9.6 8.8-16 9.6-176.8 25.6-242.4 72-242.4 96 0 44.8 180.8 110.4 463.2 110.4s463.2-65.6 463.2-110.4c0-24-66.4-70.4-244.8-96-6.4-0.8-12-4-16-9.6-4-4.8-5.6-11.2-4.8-17.6 1.6-12 12-20.8 24-20.8h3.2c85.6 12 285.6 50.4 285.6 143.2 0.8 103.2-256 158.4-509.6 158.4z m-16.8-169.6c-12-11.2-288.8-272.8-288.8-529.6 0-168 136.8-304.8 304.8-304.8S816 145.6 816 313.6c0 249.6-276.8 517.6-288.8 528.8l-16 16-16-15.2zM512 56.8c-141.6 0-256.8 115.2-256.8 256.8 0 200.8 196 416 256.8 477.6 61.6-63.2 257.6-282.4 257.6-477.6C768.8 172.8 653.6 56.8 512 56.8z m0 392.8c-80 0-144.8-64.8-144.8-144.8S432 160 512 160c80 0 144.8 64.8 144.8 144.8 0 80-64.8 144.8-144.8 144.8zM512 208c-53.6 0-96.8 43.2-96.8 96.8S458.4 401.6 512 401.6c53.6 0 96.8-43.2 96.8-96.8S564.8 208 512 208z"
+                            fill="" />
+                    </svg>
+                </div>
 
-            <p class="text-center">
-                Nhà hàng ABC – 123 Nguyễn Văn A, Quận 1, TP.HCM
+                <span class="title thong-tin anim-left">Địa điểm tổ chức</span>
+            </div>
+
+            <p class="align-items-center d-flex flex-column justify-content-center">
+                <span class="thong-tin anim-left text-center">Tại <span class="noi-to-chuc-tiec"
+                        id="noi-to-chuc-tiec">tư gia nhà trai</span> </span>
+                <span class="chi-tiet thong-tin anim-left text-center" id="dia-chi-chi-tiet">Số 120 đường Minh Tân, Minh
+                    Hồng, Ba Vì, Hà Nội</span>
             </p>
 
-            <div class="map-container" id="map-container">
+            <div class="btn-chi-duong d-flex justify-content-center mb-3">
+                <a id="chi-duong" href="https://www.google.com/maps/dir/?api=1&destination=21.0489811,105.3240668"
+                    target="_blank" rel="noopener noreferrer">
+                    🚗 Chỉ đường
+                </a>
+            </div>
+
+
+            <div class="map-container thong-tin in-up" id="map-container">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d465.44907487242114!2d105.32406676193534!3d21.048981101629376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDAyJzU2LjQiTiAxMDXCsDE5JzI2LjEiRQ!5e0!3m2!1svi!2s!4v1767339788819!5m2!1svi!2s"
                     width="100%" style="border:0; aspect-ratio: 16/9;" allowfullscreen="" loading="lazy"
@@ -293,13 +312,7 @@
     </div>
 
     <style>
-        .map-container {
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        }
+        
     </style>
 
     <script src="./js/wedding.js" defer></script>
