@@ -67,7 +67,7 @@
             </div>
         </div>
 
-        <div class="hd mt-4 mb-5" id="note-click-heart">--Nhấp vào trái tim để mở thiệp--</div>
+        <div class="hd mt-4 mb-4" id="note-click-heart">--Nhấp vào trái tim để mở thiệp--</div>
 
         <div class="name mt-4 py-2 d-none" id="name-co__dau-chu__re">
             <span class="chu-re">Đức <br /> Tuyên</span>
@@ -93,7 +93,7 @@
             </svg>
         </div>
 
-        <section class="thong-tin-2-gia-dinh mb-5 d-none" id="section-thong-tin">
+        <section class="thong-tin-2-gia-dinh mb-4 d-none" id="section-thong-tin">
             <div class="hide mt-5"></div>
             <div class="thu-moi-cuoi mt-5">
                 Thư <br />
@@ -124,7 +124,7 @@
             </div>
         </section>
 
-        <section class="intro-co-dau-chu-re mb-5 d-none" id="section-intro-co-dau-chu-re">
+        <section class="intro-co-dau-chu-re mb-4 d-none" id="section-intro-co-dau-chu-re">
             <div class="thong-tin title anim-left">Trân trọng báo tin lễ thành hôn</div>
 
             <div class="align-items-center d-flex flex-column">
@@ -138,19 +138,19 @@
             </div>
         </section>
 
-        <section class="section-info-dam-cuoi mb-5 d-none" id="section-info-dam-cuoi">
+        <section class="section-info-dam-cuoi mb-4 d-none" id="section-info-dam-cuoi">
             <div class="title thong-tin anim-left">
                 Trân trọng kính mời
             </div>
 
             <div class="imgs-container row py-3 gx-2">
-                <div class="img-dam-cuoi thong-tin anim-left lazy-img col-4 mt-3">
+                <div class="img-dam-cuoi thong-tin anim-left lazy-img col-4 mt-4">
                     <img class="w-100" data-src="./images/image-1.JPG" alt="img đám cưới 1">
                 </div>
                 <div class="img-dam-cuoi thong-tin in-up lazy-img col-4">
                     <img class="w-100" data-src="./images/image-2.JPG" alt="img đám cưới 2">
                 </div>
-                <div class="img-dam-cuoi thong-tin anim-right lazy-img col-4 mt-3">
+                <div class="img-dam-cuoi thong-tin anim-right lazy-img col-4 mt-4">
                     <img class="w-100" data-src="./images/image-3.JPG" alt="img đám cưới 3">
                 </div>
             </div>
@@ -270,8 +270,8 @@
             </div>
         </section>
 
-        <section class="section-map mb-5 d-none" id="section-map">
-            <div class="d-flex dia-diem justify-content-center mb-4 py-1 thong-tin anim-left">
+        <section class="section-map mb-4 d-none" id="section-map">
+            <div class="d-flex dia-diem justify-content-center mb-3 py-1 thong-tin anim-left">
                 <div class="icon-box thong-tin anim-right">
                     <?xml version="1.0" encoding="utf-8"?>
                     <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
@@ -308,13 +308,233 @@
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
+
+        <section class="gift-container mb-4 d-none" id="section-gift">
+            <!-- Gift buttons -->
+            <div class="gift-section">
+                <button class="gift-btn bride thong-tin anim-left" data-target="bride">
+                    🎁 Cô Dâu
+                </button>
+                <button class="gift-btn groom thong-tin anim-right" data-target="groom">
+                    🎁 Chú Rể
+                </button>
+            </div>
+
+            <!-- Popup -->
+            <div class="gift-popup" id="giftPopup">
+                <div class="popup-overlay"></div>
+
+                <div class="popup-content">
+                    <button class="popup-close">&times;</button>
+
+                    <h3 id="popupTitle"></h3>
+                    <img id="popupQr" src="" alt="QR ngân hàng">
+                    <p class="thank-text">
+                        Cảm ơn bạn đã gửi lời chúc và món quà yêu thương ❤️
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-thankyou d-none" id="footer">
+            <img src="./images/footer-bg.JPG" alt="anh cuoi" srcset="">
+
+            <div class="footer-content">
+                <span class="thankyou thong-tin in-up">Thank you</span>
+                <span class="thong-tin in-up">Rất vinh dự được đón tiếp!</span>
+            </div>
+        </footer>
+
     </div>
 
     <style>
-        .map-container iframe {
-            animation: fadeIn 0.6s ease forwards;
+        /* Section */
+        .gift-section {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
         }
+
+        .gift-container .thong-tin {
+            opacity: 0;
+        }
+
+        /* Buttons */
+        .gift-btn {
+            padding: 8px 16px;
+            border-radius: 40px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gift-btn.bride,
+        .gift-btn.groom {
+            background: linear-gradient(115deg, var(--envelope-cover), var(--envelope-tab));
+        }
+
+        .gift-btn:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Popup */
+        .gift-popup {
+            position: fixed;
+            inset: 0;
+            display: none;
+            z-index: 999;
+        }
+
+        .gift-popup.show {
+            display: block;
+        }
+
+        /* Overlay */
+        .popup-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Content */
+        .popup-content {
+            position: relative;
+            background: #fff;
+            max-width: 360px;
+            margin: auto;
+            margin-top: 10vh;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            animation: popupZoom 0.4s ease;
+        }
+
+        .popup-content h3 {
+            margin-bottom: 16px;
+            font-size: 20px;
+        }
+
+        .popup-content img {
+            width: 220px;
+            max-width: 100%;
+            margin: 10px auto 20px;
+        }
+
+        .thank-text {
+            font-size: 14px;
+            color: #555;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        /* Close button */
+        .popup-close {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            font-size: 24px;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes popupZoom {
+            from {
+                opacity: 0;
+                transform: scale(0.8) translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .footer-thankyou .thong-tin {
+            opacity: 0;
+        }
+
+        .footer-thankyou {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-thankyou img {
+            width: 100%;
+            filter: blur(0.8px);
+        }
+
+        .footer-content {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            padding: 10px;
+            background-color: var(--envelope-cover);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .footer-content {
+            font-size: 2rem;
+            font-weight: 500;
+            color: white;
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .footer-content .thankyou {}
     </style>
+
+    <script>
+        const popup = document.getElementById("giftPopup");
+        const popupTitle = document.getElementById("popupTitle");
+        const popupQr = document.getElementById("popupQr");
+
+        const qrData = {
+            bride: {
+                title: "Tặng quà Cô Dâu 💐",
+                qr: "./images/qr-bride.png" // đổi thành QR cô dâu
+            },
+            groom: {
+                title: "Tặng quà Chú Rể 🤵",
+                qr: "./images/qr-groom.png" // đổi thành QR chú rể
+            }
+        };
+
+        document.querySelectorAll(".gift-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const target = btn.dataset.target;
+                popupTitle.textContent = qrData[target].title;
+                popupQr.src = qrData[target].qr;
+                popup.classList.add("show");
+            });
+        });
+
+        document.querySelector(".popup-close").onclick = closePopup;
+        document.querySelector(".popup-overlay").onclick = closePopup;
+
+        function closePopup() {
+            popup.classList.remove("show");
+        }
+    </script>
+
 
     <script src="./js/wedding.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

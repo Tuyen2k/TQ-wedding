@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameContainer = document.querySelector("#name-co__dau-chu__re");
   const arrowDown = document.querySelector("#arrow-down__hint");
   const sectionThongTin = document.querySelector("#section-thong-tin");
+  const sectionGift = document.querySelector("#section-gift");
+  const footer = document.querySelector("#footer");
   const sectionIntroCoDauChuRe = document.querySelector(
     "#section-intro-co-dau-chu-re"
   );
@@ -30,6 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
     sectionIntroCoDauChuRe.classList.remove("d-none");
     sectionInfoDamCuoi.classList.remove("d-none");
     sectionMap.classList.remove("d-none");
+    sectionGift.classList.remove("d-none");
+    footer.classList.remove("d-none");
     isThongTinShown = true;
   };
 
@@ -61,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const index = [...items].indexOf(entry.target);
           setTimeout(() => {
             entry.target.classList.add("show");
-          }, index * 300); // delay theo thứ tự
+          }, index * 200); // delay theo thứ tự
           observer.unobserve(entry.target);
         }
       });
