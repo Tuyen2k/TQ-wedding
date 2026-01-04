@@ -1,6 +1,6 @@
 :root {
     --primary: #fff;
-    --bg-color: rgb(218, 231, 233);
+    --bg-color: #fffdf7;
     --bg-envelope-color: #f4e1d2;
     --envelope-border-color: #d3bfa6;
     --envelope-tab: #cf1c1c;
@@ -14,7 +14,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color) !important;
     font-family: 'Cormorant Garamond', serif;
     display: flex;
     justify-content: center;
@@ -74,6 +74,8 @@ body {
     border-right: 150px solid var(--envelope-cover);
     border-bottom: 100px solid var(--envelope-cover);
     border-left: 150px solid var(--envelope-cover);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 .envelope>.letter {
@@ -98,39 +100,17 @@ body {
 
 .heart {
     position: absolute;
-    top: 51%;
+    top: 45%;
     left: 50%;
-    width: 20px;
-    height: 20px;
-    background-color: var(--heart-color);
+    width: 40px;
+    height: 40px;
     z-index: 4;
     transform: translate(-50%, 20%) rotate(45deg);
     transition: transform 0.5s ease-in-out;
-    box-shadow: 0 1 15px var(--shadow-color);
     cursor: pointer;
-}
-
-.heart::before,
-.heart::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: var(--heart-color);
-    border-radius: 50%;
-}
-
-.heart::before {
-    top: -8.5px;
-}
-
-.heart::after {
-    left: -8.5px;
-}
-
-.flap .heart {
-    transform: rotate(135deg);
-    transition-delay: 0.3s;
+    background-image: url(/images/wax-seal.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .flap .envelope::before {
@@ -186,7 +166,7 @@ body {
     color: gray;
 }
 
-.name {
+/* .name {
     position: relative;
     gap: 1.5rem;
     font-size: 2.8rem;
@@ -221,28 +201,23 @@ body {
     justify-self: start;
 }
 
-/* Chú rể - từ trái vào */
 .name .chu-re {
     opacity: 0;
     animation: groomIn 1.5s ease-out forwards;
     animation-delay: 0.5s;
 }
 
-/* Trái tim - từ trong ra */
 .name .trai-tim {
     opacity: 0;
     animation: heartPop 1.5s ease-out forwards;
     animation-delay: 0.5s;
 }
 
-/* Cô dâu - từ phải vào */
 .name .co-dau {
     opacity: 0;
     animation: brideIn 1.5s ease-out forwards;
     animation-delay: 0.5s;
 }
-
-/* Đường kẻ trên & dưới */
 .name::before,
 .name::after {
     content: '';
@@ -257,15 +232,13 @@ body {
             transparent);
 }
 
-/* Đường trên */
 .name::before {
     top: 0;
 }
 
-/* Đường dưới */
 .name::after {
     bottom: 0;
-}
+}*/
 
 .arrow-down {
     text-align: center;
@@ -299,7 +272,7 @@ body {
 
 .hide {
     height: calc(1.5em * 3);
-    background: white;
+    background: var(--bg-color);
     position: absolute;
     top: 0;
     width: 20%;
@@ -320,7 +293,7 @@ body {
 
 /* Thư mời cưới */
 .thu-moi-cuoi {
-    background: #fff;
+    background: var(--bg-color);
     font-weight: 600;
     letter-spacing: 2px;
     line-height: 1.5em;

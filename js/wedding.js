@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const heart = document.querySelector(".heart");
+  const heart = document.querySelector("#section-1");
   const envelopWrapper = document.querySelector(".envelope-wrapper");
   const noteClickHeart = document.querySelector("#note-click-heart");
   const nameContainer = document.querySelector("#name-co__dau-chu__re");
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   arrowDown.addEventListener("click", () => {
     onUserIntent();
 
-    sectionThongTin.scrollIntoView({
+    nameContainer.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
