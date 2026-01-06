@@ -44,9 +44,10 @@
 
 <body>
     <div class="container text-shadow">
-        <div class="mt-5 mt-lg-3">
+        <div class="mt-5 mt-lg-3 bg position-relative">
+            <img src="./images/sen-2.png" alt="">
         </div>
-        <div class="title mb-3">
+        <div class="mb-3 position-relative title z-2">
             <span>Save The Date</span>
         </div>
 
@@ -65,9 +66,9 @@
             </div>
         </div>
 
-        <div class="hd mt-4 mb-4" id="note-click-heart">--Chạm để mở thiệp--</div>
+        <div class="hd mt-5 mb-4" id="note-click-heart">--Chạm để mở thiệp--</div>
 
-        <div class="arrow-down mt-3 d-none" id="arrow-down__hint">
+        <div class="arrow-down mt-5 d-none" id="arrow-down__hint">
             <?xml version="1.0" encoding="iso-8859-1"?>
             <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
             <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -165,6 +166,14 @@
                     <img class="w-100 border-radius-5" data-src="./images/image-3.JPG" alt="img đám cưới 3">
                 </div>
             </div>
+
+            <!-- <div class="carousel-wrapper">
+                <div class="carousel">
+                    <img class="img left" />
+                    <img class="img center" />
+                    <img class="img right" />
+                </div>
+            </div> -->
 
             <div class="thong-tin-dam-cuoi">
                 <div class="title thong-tin anim-left">
@@ -428,7 +437,6 @@
             <img src="./images/footer-bg.JPG" alt="anh cuoi" srcset="">
 
             <div class="footer-content thong-tin anim-left">
-                <span class="thankyou thong-tin in-up">Thank you</span>
                 <span class="thong-tin in-up">Rất vinh dự được đón tiếp!</span>
             </div>
         </footer>
@@ -460,367 +468,7 @@
 
 
     <style>
-        .avatar-ring {
-            position: relative;
-            width: 120px;
-            height: 120px;
-        }
 
-        .ring-svg {
-            position: absolute;
-            inset: 0;
-        }
-
-        .avatar-ring img {
-            position: absolute;
-            inset: 10px;
-            width: calc(100% - 20px);
-            height: calc(100% - 20px);
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .bank-container {
-            border-radius: 20px;
-            box-shadow: 0 0 6px 6px gainsboro;
-        }
-
-        .bank-container .qr-img {
-            background-color: #fff;
-            box-shadow: 0 0 2px 2px antiquewhite;
-        }
-
-        .bank-container .info {
-            font-size: 1rem;
-            text-align: center;
-        }
-
-        .bank-container .info .role {
-            opacity: 0.8;
-        }
-
-        .bank-container .info .name {
-            font-weight: 500;
-        }
-
-        /* Section */
-        .gift-section {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .gift-container .thong-tin {
-            opacity: 0;
-        }
-
-        .gift-container .title {
-            font-size: 1.5rem;
-            font-weight: 500;
-            font-family: 'Courier New', Courier, monospace;
-            color: #d70000;
-        }
-
-        /* Buttons */
-        .gift-btn {
-            padding: 8px 16px;
-            border-radius: 40px;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            font-weight: 600;
-            color: #fff;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .gift-btn.bride,
-        .gift-btn.groom {
-            background: linear-gradient(115deg, var(--envelope-cover), var(--envelope-tab));
-        }
-
-        .gift-btn:hover {
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Popup */
-        .gift-popup {
-            position: fixed;
-            inset: 0;
-            display: none;
-            z-index: 999;
-        }
-
-        .gift-popup.show {
-            display: block;
-        }
-
-        /* Overlay */
-        .popup-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.6);
-            animation: fadeIn 0.3s ease;
-        }
-
-        /* Content */
-        .popup-content {
-            position: relative;
-            background: #fff;
-            max-width: 360px;
-            margin: auto;
-            margin-top: 10vh;
-            padding: 20px;
-            border-radius: 20px;
-            text-align: center;
-            animation: popupZoom 0.4s ease;
-        }
-
-        .popup-content h3 {
-            margin-bottom: 16px;
-            font-size: 20px;
-        }
-
-        .popup-content img {
-            width: 220px;
-            max-width: 100%;
-            margin: 10px auto 20px;
-            box-shadow: 0 0 2px 2px antiquewhite;
-            border-radius: 5px;
-        }
-
-        .thank-text {
-            font-size: 14px;
-            color: #555;
-            opacity: 0.8;
-            font-weight: 500;
-        }
-
-        /* Close button */
-        .popup-close {
-            position: absolute;
-            top: 12px;
-            right: 16px;
-            font-size: 24px;
-            border: none;
-            background: none;
-            cursor: pointer;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes popupZoom {
-            from {
-                opacity: 0;
-                transform: scale(0.8) translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
-        }
-
-        .footer-thankyou .thong-tin {
-            opacity: 0;
-        }
-
-        .footer-thankyou {
-            position: relative;
-            overflow: hidden;
-            margin: auto;
-            max-width: 500px;
-            border-radius: 24px;
-        }
-
-        .footer-thankyou img {
-            width: 100%;
-            filter: brightness(0.9);
-        }
-
-        .footer-content {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            padding: 10px;
-            background-color: var(--envelope-cover);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .footer-content {
-            font-size: 2rem;
-            font-weight: 500;
-            color: white;
-            font-family: 'Great Vibes', cursive;
-        }
-
-        .invitation-box img {
-            width: 100%;
-            filter: brightness(0.9);
-        }
-
-        .invitation-content {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            padding: 10px;
-            background-color: #f9f6eebf;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .invitation-content {
-            font-size: 15px;
-        }
-
-        .invitation-content .invitation-name {
-            font-size: 2rem;
-            font-family: 'Great Vibes', cursive;
-        }
-
-        .audio-control {
-            position: fixed;
-            top: 16px;
-            right: 16px;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: var(--envelope-cover);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 1000;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-        }
-
-        /* Icon chung */
-        .icon-music {
-            width: 22px;
-            height: 22px;
-            fill: none;
-            stroke: #fff;
-            stroke-width: 2;
-        }
-
-        /* Trạng thái */
-        .icon-off {
-            display: none;
-        }
-
-        .audio-control.playing .icon-on {
-            display: block;
-        }
-
-        .audio-control.playing .icon-off {
-            display: none;
-        }
-
-        .audio-control.paused .icon-on {
-            display: none;
-        }
-
-        .audio-control.paused .icon-off {
-            display: block;
-        }
-
-        /* Xoay khi đang phát */
-        .audio-control.playing {
-            animation: rotateMusic 3s linear infinite;
-        }
-
-        .audio-control.paused {
-            animation: none;
-            opacity: 0.7;
-        }
-
-        @keyframes rotateMusic {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        .invitation-box {
-            position: relative;
-            max-width: 500px;
-            margin: 48px auto;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-        }
-
-        /* Ảnh nền */
-        .invitation-bg {
-            position: absolute;
-            inset: 0;
-            background: url("./images/footer-bg.jpg") center / cover no-repeat;
-            filter: brightness(0.9);
-        }
-
-        /* Nội dung */
-        .invitation-content {
-            position: absolute;
-            z-index: 2;
-            padding: 1rem;
-            text-align: center;
-            color: #4A3F35;
-        }
-
-        .invite-title {
-            font-family: "Family Aquarelle", cursive;
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .invite-text {
-            font-size: 16px;
-            line-height: 1.8;
-        }
-
-        .invite-name {
-            font-family: "Katty Diona", cursive;
-            font-size: 48px;
-            margin: 24px 0;
-        }
-
-        .invite-date {
-            font-size: 18px;
-            letter-spacing: 3px;
-        }
-
-        .invitation-box {
-            animation: fadeUp 1s ease forwards;
-        }
-
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(24px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
     </style>
 
     <script>
@@ -882,6 +530,36 @@
             }
         });
     </script>
+
+<!-- <script>
+  const images = [
+    './images/image-1.jpg',
+    './images/image-2.jpg',
+    './images/image-3.jpg',
+    './images/image-4.jpg',
+    './images/image-5.jpg'
+  ];
+
+  let index = 0;
+
+  const leftImg = document.querySelector('.img.left');
+  const centerImg = document.querySelector('.img.center');
+  const rightImg = document.querySelector('.img.right');
+
+  function render() {
+    leftImg.src = images[(index + images.length - 1) % images.length];
+    centerImg.src = images[index];
+    rightImg.src = images[(index + 1) % images.length];
+  }
+
+  function next() {
+    index = (index + 1) % images.length;
+    render();
+  }
+
+  render();
+  setInterval(next, 3000);
+</script> -->
 
 
     <script src="./js/wedding.js" defer></script>
