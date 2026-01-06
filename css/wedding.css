@@ -854,7 +854,7 @@ body {
 
 .footer-thankyou img {
     width: 100%;
-    filter: brightness(0.9);
+    filter: brightness(0.5);
 }
 
 .footer-content {
@@ -862,7 +862,6 @@ body {
     top: 50%;
     width: 100%;
     padding: 10px;
-    background-color: var(--envelope-cover);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -874,6 +873,10 @@ body {
     font-weight: 500;
     color: white;
     font-family: 'Great Vibes', cursive;
+}
+
+.footer-content span{
+    text-shadow: 0 40px 1px rgb(0 0 0);
 }
 
 /*Footer End*/
