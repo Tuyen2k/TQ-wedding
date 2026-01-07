@@ -155,7 +155,7 @@
                 Trân trọng kính mời
             </div>
 
-            <div class="imgs-container row py-3 gx-2">
+            <!-- <div class="imgs-container row py-3 gx-2">
                 <div class="img-dam-cuoi thong-tin anim-left lazy-img col-4 mt-4">
                     <img class="w-100 border-radius-5" data-src="./images/image-1.JPG" alt="img đám cưới 1">
                 </div>
@@ -165,15 +165,15 @@
                 <div class="img-dam-cuoi thong-tin anim-right lazy-img col-4 mt-4">
                     <img class="w-100 border-radius-5" data-src="./images/image-3.JPG" alt="img đám cưới 3">
                 </div>
-            </div>
-
-            <!-- <div class="carousel-wrapper">
-                <div class="carousel">
-                    <img class="img left" />
-                    <img class="img center" />
-                    <img class="img right" />
-                </div>
             </div> -->
+
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    <img class="img left thong-tin anim-left lazy-img" />
+                    <img class="img center thong-tin in-up lazy-img" />
+                    <img class="img right thong-tin anim-right lazy-img" />
+                </div>
+            </div>
 
             <div class="thong-tin-dam-cuoi">
                 <div class="title thong-tin anim-left">
@@ -471,6 +471,7 @@
 
     </style>
 
+    <!-- js popup QR -->
     <script>
         const popup = document.getElementById("giftPopup");
         const popupTitle = document.getElementById("popupTitle");
@@ -503,6 +504,7 @@
             popup.classList.remove("show");
         }
     </script>
+    <!-- js audio -->
     <script>
         const audio = document.getElementById("weddingAudio");
         const audioControl = document.getElementById("audioControl");
@@ -531,7 +533,7 @@
         });
     </script>
 
-<!-- <script>
+<script>
   const images = [
     './images/image-1.jpg',
     './images/image-2.jpg',
@@ -559,7 +561,7 @@
 
   render();
   setInterval(next, 3000);
-</script> -->
+</script>
 
 
     <script src="./js/wedding.js" defer></script>
