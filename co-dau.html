@@ -44,12 +44,11 @@
 
 <body>
     <div class="container text-shadow">
-        <div class="mt-5 mt-lg-3">
+        <div class="mt-5 mt-lg-3 bg position-relative">
+            <img src="./images/sen-2.png" alt="">
         </div>
-        <div class="title mb-3">
-            Thiệp
-            <br />
-            <span>Mời Cưới</span>
+        <div class="mb-3 position-relative title z-2">
+            <span>Save The Date</span>
         </div>
 
         <div class="chu-hy d-flex justify-content-center mb-2">
@@ -57,7 +56,7 @@
         </div>
 
         <div class="section-1">
-            <div class="envelope-wrapper scale-up-center">
+            <div class="envelope-wrapper scale-up-center" id="section-1">
                 <div class="envelope">
                     <div class="letter">
                         <img src="./images/img-letter-wrap.png" alt="">
@@ -67,15 +66,9 @@
             </div>
         </div>
 
-        <div class="hd mt-4 mb-4" id="note-click-heart">--Nhấp vào trái tim để mở thiệp--</div>
+        <div class="hd mt-5 mb-4" id="note-click-heart">--Chạm để mở thiệp--</div>
 
-        <div class="name mt-4 py-2 d-none" id="name-co__dau-chu__re">
-            <span class="chu-re">Đức <br /> Tuyên</span>
-            <span class="trai-tim"> ❤️ </span>
-            <span class="co-dau">Tổ <br /> Quyên</span>
-        </div>
-
-        <div class="arrow-down mt-3 mb-6 d-none" id="arrow-down__hint">
+        <div class="arrow-down mt-5 d-none" id="arrow-down__hint">
             <?xml version="1.0" encoding="iso-8859-1"?>
             <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
             <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -93,12 +86,39 @@
             </svg>
         </div>
 
+        <div class="name mt-4 d-none" id="name-co__dau-chu__re">
+            <!-- <span class="chu-re">Đức <br /> Tuyên</span>
+            <span class="trai-tim"> ❤️ </span>
+            <span class="co-dau">Tổ <br /> Quyên</span> -->
+            <div class="invitation-box">
+                <img class="invitation-img" src="./images/invitation.png" alt="anh cuoi" srcset="">
+
+                <div class="invitation-content">
+                    <span class="invitation-name">Đức Tuyên - Tố Quyên</span>
+                    <span class="invitation">Chúng mình sắp bắt đầu một hành trình mới cùng nhau. Hạnh phúc không chỉ
+                        nằm ở khoảnh khắc chúng mình về chung một lối,
+                        mà còn ở niềm vui được sẻ chia cùng những người yêu quý.
+                        Chúng mình trân trọng mời bạn đến chung vui và lưu giữ cùng chúng mình một kỷ niệm thật đẹp
+                        trong ngày hạnh phúc ấy.
+                    </span>
+                </div>
+            </div>
+        </div>
+
         <section class="thong-tin-2-gia-dinh mb-4 d-none" id="section-thong-tin">
             <div class="hide mt-5"></div>
             <div class="thu-moi-cuoi mt-5">
                 Thư <br />
                 Mời <br />
                 Cưới
+            </div>
+
+            <div class="thong-tin">
+                <i>Nhà Gái</i><br />
+                Mẹ Đỗ Thị Thoan <br />
+                <span class="dia-chi">
+                    Móng Cái 3, Quảng Ninh
+                </span>
             </div>
 
             <div class="thong-tin">
@@ -110,14 +130,6 @@
                 </span>
             </div>
 
-            <div class="thong-tin">
-                <i>Nhà Gái</i><br />
-                Mẹ Đỗ Thị Thoan <br />
-                <span class="dia-chi">
-                    Móng Cái 3, Quảng Ninh
-                </span>
-            </div>
-
             <div class="img-chu-hy">
                 <img src="./images/chu-hy-do.png" alt="chu hy">
                 <div class="dot mt-3"></div>
@@ -125,16 +137,16 @@
         </section>
 
         <section class="intro-co-dau-chu-re mb-4 d-none" id="section-intro-co-dau-chu-re">
-            <div class="thong-tin title anim-left">Trân trọng báo tin lễ thành hôn</div>
+            <div class="thong-tin title anim-left">Trân trọng báo tin Lễ Vu Quy</div>
 
             <div class="align-items-center d-flex flex-column">
-                <span class="thong-tin chu-re anim-right">Nguyễn Đức Tuyên</span>
+                <span class="thong-tin chu-re anim-right">Lâm Tố Quyên</span>
                 <span class="thong-tin icon anim-left">&</span>
-                <span class="thong-tin co-dau anim-right">Lâm Tố Quyên</span>
+                <span class="thong-tin co-dau anim-right">Nguyễn Đức Tuyên</span>
             </div>
 
-            <div class="intro-img thong-tin in-up px-3 lazy-img">
-                <img class="w-100" data-src="./images/img-meta-2.png" alt="img intro cô dâu chú rể">
+            <div class="intro-img thong-tin in-up lazy-img">
+                <img class="w-100 border-radius-5" data-src="./images/img-meta-2.png" alt="img intro cô dâu chú rể">
             </div>
         </section>
 
@@ -143,38 +155,45 @@
                 Trân trọng kính mời
             </div>
 
-            <div class="imgs-container row py-3 gx-2">
+            <!-- <div class="imgs-container row py-3 gx-2">
                 <div class="img-dam-cuoi thong-tin anim-left lazy-img col-4 mt-4">
-                    <img class="w-100" data-src="./images/image-1.JPG" alt="img đám cưới 1">
+                    <img class="w-100 border-radius-5" data-src="./images/image-1.JPG" alt="img đám cưới 1">
                 </div>
                 <div class="img-dam-cuoi thong-tin in-up lazy-img col-4">
-                    <img class="w-100" data-src="./images/image-2.JPG" alt="img đám cưới 2">
+                    <img class="w-100 border-radius-5" data-src="./images/image-2.JPG" alt="img đám cưới 2">
                 </div>
                 <div class="img-dam-cuoi thong-tin anim-right lazy-img col-4 mt-4">
-                    <img class="w-100" data-src="./images/image-3.JPG" alt="img đám cưới 3">
+                    <img class="w-100 border-radius-5" data-src="./images/image-3.JPG" alt="img đám cưới 3">
+                </div>
+            </div> -->
+
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    <img class="img left thong-tin anim-left lazy-img" />
+                    <img class="img center thong-tin in-up lazy-img" />
+                    <img class="img right thong-tin anim-right lazy-img" />
                 </div>
             </div>
 
             <div class="thong-tin-dam-cuoi">
                 <div class="title thong-tin anim-left">
-                    TIỆC MỪNG LỄ THÀNH HÔN
+                    TIỆC MỪNG LỄ VU QUY
                 </div>
-                <div class="mt-3 thoi-gian">
-                    <span class="re-time thong-tin anim-left">Vào lúc <span id="time">10h30 | Thứ 2</span></span>
-                    <div
-                        class="align-items-center d-flex date-container gap-3 justify-content-between px-5 w-100 thong-tin anim-left">
+                <div class="mt-3 thoi-gian thong-tin anim-left">
+                    <span class="re-time">Vào lúc <span id="time">10h30 | Thứ 2</span></span>
+                    <div class="align-items-center d-flex date-container gap-3 justify-content-between px-5 w-100 ">
                         <span class="month">Tháng 01</span>
                         <span class="line"></span>
                         <span class="day">19</span>
                         <span class="line"></span>
                         <span class="year">2026</span>
                     </div>
-                    <span class="ngay-am thong-tin anim-left">
-                        <i>(Ngày 01 tháng 12 năm 2025 âm lịch)</i>
+                    <span class="ngay-am ">
+                        <i>(Ngày 01 tháng 12 năm Ất Tỵ)</i>
                     </span>
-                    <div class="noi-to-chuc mb-3 mt-2 px-2 thong-tin anim-left">
+                    <div class="noi-to-chuc mb-3 mt-2 px-2 ">
                         Tại: <span class="chi-tiet ps-1" id="chi-tiet">
-                            Chợ mới, khu Hải Đông 8, phường Móng Cái 3, Quảng Ninh
+                            Chợ mới, khu Hải Đông 8, Móng Cái 3, Quảng Ninh
                         </span>
                     </div>
 
@@ -238,6 +257,7 @@
                                 </div>
 
                                 <div>20
+
                                 </div>
                                 <div>21</div>
                                 <div>22</div>
@@ -261,8 +281,8 @@
         </section>
 
         <section class="section-map mb-4 d-none" id="section-map">
-            <div class="d-flex dia-diem justify-content-center mb-3 py-1 thong-tin anim-left">
-                <div class="icon-box thong-tin anim-right">
+            <div class="d-flex dia-diem justify-content-center mb-3 py-1 ">
+                <div class="icon-box ">
                     <?xml version="1.0" encoding="utf-8"?>
                     <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                     <svg width="30px" height="30px" viewBox="0 0 1024 1024" fill="#fff" class="icon" version="1.1"
@@ -273,19 +293,19 @@
                     </svg>
                 </div>
 
-                <span class="title thong-tin anim-left">Địa điểm tổ chức</span>
+                <span class="title">Địa điểm tổ chức</span>
             </div>
 
             <p class="align-items-center d-flex flex-column justify-content-center">
-                <span class="thong-tin anim-left text-center">Tại <span class="noi-to-chuc-tiec"
-                        id="noi-to-chuc-tiec">Tư gia nhà gái</span> </span>
-                <span class="chi-tiet thong-tin anim-left text-center" id="dia-chi-chi-tiet">
-                    Chợ mới, khu Hải Đông 8, phường Móng Cái 3, Quảng Ninh
+                <span class=" text-center">Tại <span class="noi-to-chuc-tiec" id="noi-to-chuc-tiec">Tư gia nhà
+                        Gái</span> </span>
+                <span class="chi-tiet text-center" id="dia-chi-chi-tiet">
+                    Chợ mới, khu Hải Đông 8, Móng Cái 3, Quảng Ninh
                 </span>
             </p>
 
-            <div class="btn-chi-duong d-flex justify-content-center mb-3 thong-tin anim-left">
-                <a id="chi-duong" href="https://www.google.com/maps/dir/?api=1&destination=21.539831,107.866768"
+            <div class="btn-chi-duong d-flex justify-content-center mb-3 ">
+                <a id="chi-duong" href="https://www.google.com/maps/dir/?api=1&destination=21.539851,107.866767"
                     target="_blank" rel="noopener noreferrer">
                     🚗 Chỉ đường
                 </a>
@@ -294,21 +314,106 @@
 
             <div class="map-container" id="map-container">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d927.7949037960212!2d107.86612426957083!3d21.539830998765044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDMyJzIzLjQiTiAxMDfCsDUyJzAwLjQiRQ!5e0!3m2!1svi!2s!4v1767537483523!5m2!1svi!2s"
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d927.7947759633721!2d107.86612326955193!3d21.539850998765033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDMyJzIzLjUiTiAxMDfCsDUyJzAwLjQiRQ!5e0!3m2!1svi!2s!4v1767893685120!5m2!1svi!2s"
                     width="100%" style="border:0; aspect-ratio: 16/9;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
-        <section class="gift-container mb-4 d-none" id="section-gift">
+        <section class="gift-container mb-5 d-none" id="section-gift">
             <!-- Gift buttons -->
-            <div class="gift-section">
+            <!-- <div class="gift-section">
                 <button class="gift-btn bride btn-shake-diagonal-scale" data-target="bride">
                     🎁 Cô Dâu
                 </button>
                 <button class="gift-btn groom btn-shake-diagonal-scale" data-target="groom">
                     🎁 Chú Rể
                 </button>
+            </div> -->
+
+            <div class="title thong-tin in-up mb-4">
+                GỬI QUÀ MỪNG
+            </div>
+
+            <!-- cô dâu -->
+            <div class="gift-container d-flex align-items-center justify-content-start gap-3 mb-4">
+                <div class="avatar-ring">
+                    <!-- SVG viền trang trí -->
+                    <div id="svg-poJwImDDnk" class="ring-svg">
+                        <svg preserveAspectRatio="none" viewBox="0 0 100 100" width="100%" height="100%"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill="var(--envelope-cover)"
+                                d="M50,4H48v-4.1H50V4z M70.8,4.4l-0.2-0.1l-0.3-0.1l-0.3-0.1L69.8,4l-0.3-0.1l-0.3-0.1L69,3.6l-0.3-0.1 l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1L67.2,3L67,2.9l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1 L64.3,2L64,1.9l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1L62,1.4l-0.3-0.1l-0.3-0.1L61,1.1l-0.3-0.1L60.4,1l-0.3-0.1 l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3,0L58,0.6l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0 l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0L52,0l-0.3,0l-0.3,0H51h-0.3l-0.3,0H50V4h0.3h0.3h0.3l0.3,0h0.3 l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0 l0.3,0l0.3,0.1l0.3,0l0.3,0.1L59,4.9L59.3,5L59.6,5l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1L61,5.3l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1 l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1L63.4,6l0.3,0.1L64,6.2l0.3,0.1l0.3,0.1l0.3,0.1L65,6.6l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1L66.4,7 l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.2,0.1l0.3,0.1l0.3,0.1L68.7,8L69,8.1l0.2,0.1L70.8,4.4z M69.1,8.2L71,9l1.7-3.8 l-1.9-0.8L69.1,8.2z M81.7,11.2l-1.6-1.3l-2.6,3.2l1.6,1.3L81.7,11.2z M84.9,14.1L84.8,14l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.2 l-0.2-0.2l-0.2-0.2l-0.2-0.2L83,12.3l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.1l-2.6,3.2l0.2,0.1l0.2,0.2l0.2,0.2 l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2L82,17L84.9,14.1z M82,17l1.5,1.4l2.9-3 l-1.5-1.4L82,17z M92.9,24.1l-1.1-1.7l-3.5,2.1l1.1,1.8L92.9,24.1z M99.8,44.2l0-0.3l0-0.3l0-0.3l0-0.3l0-0.3l-0.1-0.3l0-0.3l0-0.3 l-0.1-0.3l-0.1-0.3l0-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3L99,39.6l-0.1-0.3L98.9,39l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3 l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3L98.1,36L98,35.7l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3 l-0.1-0.3L97,32.8l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3L96,30.2L95.9,30l-0.1-0.3l-0.1-0.3 l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3L95,28l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3L94,26.1l-0.1-0.3l-0.1-0.3 l-0.1-0.3l-0.2-0.3l-0.1-0.3l-0.1-0.3L93,24.3l-0.1-0.2l-3.5,2.1l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2 l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.3l0.1,0.2l0.1,0.2l0.1,0.3l0.1,0.2l0.1,0.3l0.1,0.2 l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.2l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3 l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3 l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0,0.3l0.1,0.3l0.1,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3L99.8,44.2z M95.7,44.7l0.2,2l4.1-0.5l-0.2-2.1L95.7,44.7z M99.6,57l0.3-2l-4.1-0.6l-0.3,2L99.6,57z M98.8,61.2l0.1-0.2l0.1-0.3l0.1-0.3 l0.1-0.3l0.1-0.3l0.1-0.3l0.1-0.3l0-0.3l0.1-0.3l0.1-0.3l0-0.3l0-0.3l0.1-0.3l0-0.3l-4.1-0.6l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3 l-0.1,0.3l-0.1,0.3l0,0.3l-0.1,0.3L95,59.5l-0.1,0.3l-0.1,0.3l0,0.2L98.8,61.2z M94.8,60.3l-0.5,2l4,0.9l0.5-2L94.8,60.3z M94.4,73.3l0.9-1.8l-3.6-1.9l-0.9,1.8L94.4,73.3z M80.7,89.6l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2 l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2 l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2 l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2 l0.2-0.2l0.2-0.3l0.2-0.2l0.2-0.2l0.2-0.3l0.2-0.2l0.1-0.3l0.2-0.3l0.2-0.2l0.2-0.3l0.1-0.3l0.1-0.3l0.2-0.3l0.1-0.3l0.1-0.3 l0.1-0.3l0.1-0.3l0.1-0.3l0-0.1l-3.6-1.9l0,0l-0.1,0.2l-0.1,0.2l-0.1,0.2l-0.1,0.2L90,72.6l-0.1,0.2l-0.1,0.2l-0.1,0.2l-0.1,0.2 l-0.1,0.2l-0.1,0.2L89,74.3l-0.1,0.2l-0.1,0.2L88.6,75l-0.1,0.2l-0.1,0.2l-0.2,0.2L88,75.9l-0.1,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2 l-0.2,0.2L87,77.3l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2L86,78.6l-0.2,0.2L85.7,79l-0.2,0.2l-0.2,0.2l-0.2,0.2L85,79.9 l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2L84,80.9l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2 l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2L80.9,84l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2 l-0.2,0.2l-0.2,0.2l-0.2,0.2L78.6,86l-0.2,0.2l-0.2,0.2L80.7,89.6z M78.2,86.3l-1.6,1.3l2.5,3.2l1.6-1.3L78.2,86.3z M69.7,96.1 l1.9-0.8l-1.6-3.8L68,92.3L69.7,96.1z M65.7,97.6l0.1,0l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1 l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1l0.1-0.1L68,92.3l-0.1,0l-0.2,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1L66.4,93l-0.3,0.1l-0.3,0.1 l-0.3,0.1l-0.3,0.1L65,93.4l-0.3,0.1l-0.3,0.1l-0.1,0L65.7,97.6z M64.4,93.7l-2,0.6l1.3,3.9l2-0.6L64.4,93.7z M53.1,100l2.1-0.1 l-0.3-4.1l-2.1,0.1L53.1,100z M50,100.1L50,100.1l0.3,0h0.3H51l0.3,0h0.3l0.3,0l0.3,0l0.3,0l0.3,0l0.1,0l-0.3-4.1h-0.1l-0.3,0 l-0.3,0l-0.3,0l-0.3,0h-0.3l-0.3,0h-0.3h-0.3H50l0,0V100.1z M32.1,96.7l0.2,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1 l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1 l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0l0.3,0.1l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0 l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0h0.3l0.3,0h0.3h0.3l0.3,0V96h-0.3h-0.3 h-0.3l-0.3,0h-0.3l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0 l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3-0.1l-0.3,0l-0.3-0.1l-0.3,0l-0.3-0.1L40.8,95L40.5,95l-0.3-0.1l-0.3-0.1l-0.3-0.1 l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1L38,94.4l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1L36.7,94l-0.3-0.1l-0.3-0.1l-0.3-0.1 l-0.3-0.1l-0.3-0.1L35,93.4l-0.3-0.1l-0.3-0.1l-0.3-0.1L34,93.1L33.7,93l-0.2-0.1L32.1,96.7z M33.5,92.9l-1.9-0.7L30.1,96l1.9,0.7 L33.5,92.9z M20.8,90.6l1.7,1.2l2.4-3.3l-1.7-1.2L20.8,90.6z M17.4,88L17.4,88l0.3,0.3l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2 l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.1l2.4-3.3L23,87.2L22.8,87l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.2 l-0.2-0.2L21.5,86l-0.2-0.2L21,85.6l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.1-0.1L17.4,88z M20.1,84.9l-1.6-1.3l-2.7,3.1l1.6,1.3 L20.1,84.9z M8.9,78.4l1.2,1.7l3.4-2.3l-1.2-1.7L8.9,78.4z M0.8,58.8L0.8,58.8l0.1,0.4l0.1,0.3l0.1,0.3L1,60.1l0.1,0.3l0.1,0.3 L1.2,61l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3L2,64l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3 l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3L3,67.2l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3L4,69.8L4.2,70 l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3L5.1,72l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3L6,73.9l0.1,0.3l0.1,0.3 l0.1,0.3l0.1,0.3l0.2,0.3l0.1,0.3l0.2,0.3L7.2,76l0.2,0.3l0.1,0.3l0.2,0.2L7.9,77L8,77.2l0.2,0.2l0.2,0.3L8.5,78l0.2,0.2l0.1,0.2 l3.4-2.3l-0.1-0.2L12,75.7l-0.2-0.2l-0.1-0.2L11.5,75l-0.1-0.2l-0.1-0.2L11,74.3l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.2 l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.2L9,70.7l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.3 l-0.1-0.2l-0.1-0.2l-0.1-0.3L8,68.7l-0.1-0.3l-0.1-0.3l-0.1-0.2l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.2l-0.1-0.3l-0.1-0.3L7,66.1 l-0.1-0.3l-0.1-0.3l-0.1-0.3L6.6,65l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3L6,63.1l-0.1-0.3l-0.1-0.3l-0.1-0.3 L5.7,62l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3L5,59.3L5,59l0-0.3l-0.1-0.3l-0.1-0.3 l0-0.1L0.8,58.8z M4.8,58.1l-0.3-2l-4,0.7l0.4,2L4.8,58.1z M0.2,46L0,48l4.1,0.3l0.1-2.1L0.2,46z M0.7,41.7L0.7,41.7l-0.1,0.3 l-0.1,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.2l4.1,0.3l0-0.1l0-0.3l0-0.3l0-0.3l0-0.3l0-0.3 l0-0.3l0-0.3l0-0.3l0-0.3l0-0.3l0-0.3l0.1-0.3l0-0.3v0L0.7,41.7z M4.7,42.4l0.3-2l-4-0.7l-0.3,2L4.7,42.4z M4.4,29.5l-0.8,1.9 L7.3,33l0.8-1.9L4.4,29.5z M17,12.4l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2L16,13.3l-0.2,0.2l-0.2,0.2L15.3,14l-0.2,0.2l-0.2,0.2 l-0.2,0.2l-0.2,0.2L14.2,15L14,15.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2L13,16.3l-0.2,0.2l-0.2,0.2L12.4,17l-0.2,0.2L12,17.5 l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2L11,18.6l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2L9.9,20l-0.2,0.2l-0.2,0.2l-0.2,0.2 L9.2,21l-0.2,0.2l-0.2,0.2l-0.2,0.2L8.5,22l-0.2,0.2l-0.2,0.2L8,22.8L7.9,23l-0.2,0.3l-0.2,0.2l-0.1,0.3L7.2,24l-0.2,0.2l-0.2,0.3 l-0.1,0.3l-0.2,0.3l-0.1,0.3l-0.1,0.3l-0.1,0.3L6,26.1l-0.1,0.3l-0.1,0.3l-0.1,0.3l-0.1,0.3l-0.1,0.3l-0.1,0.3L5.1,28l-0.1,0.3 l-0.1,0.3l-0.1,0.3l-0.1,0.3l-0.1,0.3l0,0.1l3.8,1.7l0,0l0.1-0.3l0.1-0.2l0.1-0.2l0.1-0.3l0.1-0.2l0.1-0.2L9,29.3l0.1-0.2l0.1-0.2 l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2 l0.1-0.2l0.2-0.2l0.1-0.2l0.2-0.2l0.2-0.2l0.1-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2 l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2 l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2 l0.2-0.2l0.2-0.2L17,12.4z M19.8,15.4l1.5-1.4L18.6,11L17,12.4L19.8,15.4z M27.7,5.2l-1.8,0.9l1.8,3.7l1.8-0.9L27.7,5.2z M31.6,3.4 l-0.2,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1L30.3,4L30,4.1l-0.3,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1L28.1,5l-0.3,0.1 l-0.1,0.1l1.8,3.7l0.1-0.1l0.3-0.1l0.2-0.1l0.2-0.1l0.2-0.1l0.3-0.1l0.2-0.1L31.4,8l0.2-0.1l0.3-0.1l0.3-0.1l0.2-0.1l0.3-0.1 l0.3-0.1l0.2-0.1L31.6,3.4z M33.1,7.3L35,6.5l-1.5-3.8l-1.9,0.8L33.1,7.3z M44,0.3l-2,0.2l0.5,4.1l2-0.2L44,0.3z M50-0.1L50-0.1 h-0.3l-0.3,0h-0.3h-0.3l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0 l0.5,4.1l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0h0.3l0.3,0h0.3h0.3H50l0,0V-0.1z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <!-- Ảnh avatar -->
+                    <img src="./images/avt-codau.png" alt="Avatar">
+                </div>
+                <div class="align-items-center bank-container d-flex gap-2 justify-content-start p-3">
+                    <div class="info">
+                        <div class="role">Cô dâu</div>
+                        <div class="name">Lâm Tố Quyên</div>
+                    </div>
+                    <div id="qr-img"
+                        class="qr-img d-flex align-items-center justify-content-start gap-2 border-radius-5 anim-scale"
+                        style="cursor: pointer;" data-target="bride">
+                        <svg width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                            fill="#000000">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M3 9h6V3H3zm1-5h4v4H4zm1 1h2v2H5zm10 4h6V3h-6zm1-5h4v4h-4zm1 1h2v2h-2zM3 21h6v-6H3zm1-5h4v4H4zm1 1h2v2H5zm15 2h1v2h-2v-3h1zm0-3h1v1h-1zm0-1v1h-1v-1zm-10 2h1v4h-1v-4zm-4-7v2H4v-1H3v-1h3zm4-3h1v1h-1zm3-3v2h-1V3h2v1zm-3 0h1v1h-1zm10 8h1v2h-2v-1h1zm-1-2v1h-2v2h-2v-1h1v-2h3zm-7 4h-1v-1h-1v-1h2v2zm6 2h1v1h-1zm2-5v1h-1v-1zm-9 3v1h-1v-1zm6 5h1v2h-2v-2zm-3 0h1v1h-1v1h-2v-1h1v-1zm0-1v-1h2v1zm0-5h1v3h-1v1h-1v1h-1v-2h-1v-1h3v-1h-1v-1zm-9 0v1H4v-1zm12 4h-1v-1h1zm1-2h-2v-1h2zM8 10h1v1H8v1h1v2H8v-1H7v1H6v-2h1v-2zm3 0V8h3v3h-2v-1h1V9h-1v1zm0-4h1v1h-1zm-1 4h1v1h-1zm3-3V6h1v1z">
+                                </path>
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- chú rể -->
+            <div class="gift-container d-flex align-items-center justify-content-end gap-3 mb-4">
+
+                <div class="align-items-center bank-container d-flex gap-2 justify-content-start p-3">
+                    <div id="qr-img"
+                        class="qr-img d-flex align-items-center justify-content-start gap-2 border-radius-5 anim-scale"
+                        style="cursor: pointer;" data-target="groom">
+                        <svg width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                            fill="#000000">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M3 9h6V3H3zm1-5h4v4H4zm1 1h2v2H5zm10 4h6V3h-6zm1-5h4v4h-4zm1 1h2v2h-2zM3 21h6v-6H3zm1-5h4v4H4zm1 1h2v2H5zm15 2h1v2h-2v-3h1zm0-3h1v1h-1zm0-1v1h-1v-1zm-10 2h1v4h-1v-4zm-4-7v2H4v-1H3v-1h3zm4-3h1v1h-1zm3-3v2h-1V3h2v1zm-3 0h1v1h-1zm10 8h1v2h-2v-1h1zm-1-2v1h-2v2h-2v-1h1v-2h3zm-7 4h-1v-1h-1v-1h2v2zm6 2h1v1h-1zm2-5v1h-1v-1zm-9 3v1h-1v-1zm6 5h1v2h-2v-2zm-3 0h1v1h-1v1h-2v-1h1v-1zm0-1v-1h2v1zm0-5h1v3h-1v1h-1v1h-1v-2h-1v-1h3v-1h-1v-1zm-9 0v1H4v-1zm12 4h-1v-1h1zm1-2h-2v-1h2zM8 10h1v1H8v1h1v2H8v-1H7v1H6v-2h1v-2zm3 0V8h3v3h-2v-1h1V9h-1v1zm0-4h1v1h-1zm-1 4h1v1h-1zm3-3V6h1v1z">
+                                </path>
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="info">
+                        <div class="role">Chú rể</div>
+                        <div class="name">Nguyễn Đức Tuyên</div>
+                    </div>
+                </div>
+
+                <div class="avatar-ring">
+                    <!-- SVG viền trang trí -->
+                    <div id="svg-poJwImDDnk" class="ring-svg">
+                        <svg preserveAspectRatio="none" viewBox="0 0 100 100" width="100%" height="100%"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill="var(--envelope-cover)"
+                                d="M50,4H48v-4.1H50V4z M70.8,4.4l-0.2-0.1l-0.3-0.1l-0.3-0.1L69.8,4l-0.3-0.1l-0.3-0.1L69,3.6l-0.3-0.1 l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1L67.2,3L67,2.9l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1 L64.3,2L64,1.9l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1L62,1.4l-0.3-0.1l-0.3-0.1L61,1.1l-0.3-0.1L60.4,1l-0.3-0.1 l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3,0L58,0.6l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0 l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0L52,0l-0.3,0l-0.3,0H51h-0.3l-0.3,0H50V4h0.3h0.3h0.3l0.3,0h0.3 l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0 l0.3,0l0.3,0.1l0.3,0l0.3,0.1L59,4.9L59.3,5L59.6,5l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1L61,5.3l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1 l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1L63.4,6l0.3,0.1L64,6.2l0.3,0.1l0.3,0.1l0.3,0.1L65,6.6l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1L66.4,7 l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.2,0.1l0.3,0.1l0.3,0.1L68.7,8L69,8.1l0.2,0.1L70.8,4.4z M69.1,8.2L71,9l1.7-3.8 l-1.9-0.8L69.1,8.2z M81.7,11.2l-1.6-1.3l-2.6,3.2l1.6,1.3L81.7,11.2z M84.9,14.1L84.8,14l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.2 l-0.2-0.2l-0.2-0.2l-0.2-0.2L83,12.3l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.1l-2.6,3.2l0.2,0.1l0.2,0.2l0.2,0.2 l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2L82,17L84.9,14.1z M82,17l1.5,1.4l2.9-3 l-1.5-1.4L82,17z M92.9,24.1l-1.1-1.7l-3.5,2.1l1.1,1.8L92.9,24.1z M99.8,44.2l0-0.3l0-0.3l0-0.3l0-0.3l0-0.3l-0.1-0.3l0-0.3l0-0.3 l-0.1-0.3l-0.1-0.3l0-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3L99,39.6l-0.1-0.3L98.9,39l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3 l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3L98.1,36L98,35.7l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3 l-0.1-0.3L97,32.8l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3L96,30.2L95.9,30l-0.1-0.3l-0.1-0.3 l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3L95,28l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3L94,26.1l-0.1-0.3l-0.1-0.3 l-0.1-0.3l-0.2-0.3l-0.1-0.3l-0.1-0.3L93,24.3l-0.1-0.2l-3.5,2.1l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2 l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.3l0.1,0.2l0.1,0.2l0.1,0.3l0.1,0.2l0.1,0.3l0.1,0.2 l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.2l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3 l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3 l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0,0.3l0.1,0.3l0.1,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3L99.8,44.2z M95.7,44.7l0.2,2l4.1-0.5l-0.2-2.1L95.7,44.7z M99.6,57l0.3-2l-4.1-0.6l-0.3,2L99.6,57z M98.8,61.2l0.1-0.2l0.1-0.3l0.1-0.3 l0.1-0.3l0.1-0.3l0.1-0.3l0.1-0.3l0-0.3l0.1-0.3l0.1-0.3l0-0.3l0-0.3l0.1-0.3l0-0.3l-4.1-0.6l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3 l-0.1,0.3l-0.1,0.3l0,0.3l-0.1,0.3L95,59.5l-0.1,0.3l-0.1,0.3l0,0.2L98.8,61.2z M94.8,60.3l-0.5,2l4,0.9l0.5-2L94.8,60.3z M94.4,73.3l0.9-1.8l-3.6-1.9l-0.9,1.8L94.4,73.3z M80.7,89.6l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2 l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2 l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2 l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2 l0.2-0.2l0.2-0.3l0.2-0.2l0.2-0.2l0.2-0.3l0.2-0.2l0.1-0.3l0.2-0.3l0.2-0.2l0.2-0.3l0.1-0.3l0.1-0.3l0.2-0.3l0.1-0.3l0.1-0.3 l0.1-0.3l0.1-0.3l0.1-0.3l0-0.1l-3.6-1.9l0,0l-0.1,0.2l-0.1,0.2l-0.1,0.2l-0.1,0.2L90,72.6l-0.1,0.2l-0.1,0.2l-0.1,0.2l-0.1,0.2 l-0.1,0.2l-0.1,0.2L89,74.3l-0.1,0.2l-0.1,0.2L88.6,75l-0.1,0.2l-0.1,0.2l-0.2,0.2L88,75.9l-0.1,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2 l-0.2,0.2L87,77.3l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2L86,78.6l-0.2,0.2L85.7,79l-0.2,0.2l-0.2,0.2l-0.2,0.2L85,79.9 l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2L84,80.9l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2 l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2L80.9,84l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2 l-0.2,0.2l-0.2,0.2l-0.2,0.2L78.6,86l-0.2,0.2l-0.2,0.2L80.7,89.6z M78.2,86.3l-1.6,1.3l2.5,3.2l1.6-1.3L78.2,86.3z M69.7,96.1 l1.9-0.8l-1.6-3.8L68,92.3L69.7,96.1z M65.7,97.6l0.1,0l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1 l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1l0.1-0.1L68,92.3l-0.1,0l-0.2,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1L66.4,93l-0.3,0.1l-0.3,0.1 l-0.3,0.1l-0.3,0.1L65,93.4l-0.3,0.1l-0.3,0.1l-0.1,0L65.7,97.6z M64.4,93.7l-2,0.6l1.3,3.9l2-0.6L64.4,93.7z M53.1,100l2.1-0.1 l-0.3-4.1l-2.1,0.1L53.1,100z M50,100.1L50,100.1l0.3,0h0.3H51l0.3,0h0.3l0.3,0l0.3,0l0.3,0l0.3,0l0.1,0l-0.3-4.1h-0.1l-0.3,0 l-0.3,0l-0.3,0l-0.3,0h-0.3l-0.3,0h-0.3h-0.3H50l0,0V100.1z M32.1,96.7l0.2,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1 l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1 l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0l0.3,0.1l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0 l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0h0.3l0.3,0h0.3h0.3l0.3,0V96h-0.3h-0.3 h-0.3l-0.3,0h-0.3l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0 l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3-0.1l-0.3,0l-0.3-0.1l-0.3,0l-0.3-0.1L40.8,95L40.5,95l-0.3-0.1l-0.3-0.1l-0.3-0.1 l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1L38,94.4l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1L36.7,94l-0.3-0.1l-0.3-0.1l-0.3-0.1 l-0.3-0.1l-0.3-0.1L35,93.4l-0.3-0.1l-0.3-0.1l-0.3-0.1L34,93.1L33.7,93l-0.2-0.1L32.1,96.7z M33.5,92.9l-1.9-0.7L30.1,96l1.9,0.7 L33.5,92.9z M20.8,90.6l1.7,1.2l2.4-3.3l-1.7-1.2L20.8,90.6z M17.4,88L17.4,88l0.3,0.3l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2 l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.1l2.4-3.3L23,87.2L22.8,87l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.2 l-0.2-0.2L21.5,86l-0.2-0.2L21,85.6l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.1-0.1L17.4,88z M20.1,84.9l-1.6-1.3l-2.7,3.1l1.6,1.3 L20.1,84.9z M8.9,78.4l1.2,1.7l3.4-2.3l-1.2-1.7L8.9,78.4z M0.8,58.8L0.8,58.8l0.1,0.4l0.1,0.3l0.1,0.3L1,60.1l0.1,0.3l0.1,0.3 L1.2,61l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3L2,64l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3 l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3L3,67.2l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3L4,69.8L4.2,70 l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3L5.1,72l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3l0.1,0.3L6,73.9l0.1,0.3l0.1,0.3 l0.1,0.3l0.1,0.3l0.2,0.3l0.1,0.3l0.2,0.3L7.2,76l0.2,0.3l0.1,0.3l0.2,0.2L7.9,77L8,77.2l0.2,0.2l0.2,0.3L8.5,78l0.2,0.2l0.1,0.2 l3.4-2.3l-0.1-0.2L12,75.7l-0.2-0.2l-0.1-0.2L11.5,75l-0.1-0.2l-0.1-0.2L11,74.3l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.2 l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.2L9,70.7l-0.1-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.3 l-0.1-0.2l-0.1-0.2l-0.1-0.3L8,68.7l-0.1-0.3l-0.1-0.3l-0.1-0.2l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.2l-0.1-0.3l-0.1-0.3L7,66.1 l-0.1-0.3l-0.1-0.3l-0.1-0.3L6.6,65l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3L6,63.1l-0.1-0.3l-0.1-0.3l-0.1-0.3 L5.7,62l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3L5,59.3L5,59l0-0.3l-0.1-0.3l-0.1-0.3 l0-0.1L0.8,58.8z M4.8,58.1l-0.3-2l-4,0.7l0.4,2L4.8,58.1z M0.2,46L0,48l4.1,0.3l0.1-2.1L0.2,46z M0.7,41.7L0.7,41.7l-0.1,0.3 l-0.1,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.3l0,0.2l4.1,0.3l0-0.1l0-0.3l0-0.3l0-0.3l0-0.3l0-0.3 l0-0.3l0-0.3l0-0.3l0-0.3l0-0.3l0-0.3l0.1-0.3l0-0.3v0L0.7,41.7z M4.7,42.4l0.3-2l-4-0.7l-0.3,2L4.7,42.4z M4.4,29.5l-0.8,1.9 L7.3,33l0.8-1.9L4.4,29.5z M17,12.4l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2L16,13.3l-0.2,0.2l-0.2,0.2L15.3,14l-0.2,0.2l-0.2,0.2 l-0.2,0.2l-0.2,0.2L14.2,15L14,15.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2L13,16.3l-0.2,0.2l-0.2,0.2L12.4,17l-0.2,0.2L12,17.5 l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2L11,18.6l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2L9.9,20l-0.2,0.2l-0.2,0.2l-0.2,0.2 L9.2,21l-0.2,0.2l-0.2,0.2l-0.2,0.2L8.5,22l-0.2,0.2l-0.2,0.2L8,22.8L7.9,23l-0.2,0.3l-0.2,0.2l-0.1,0.3L7.2,24l-0.2,0.2l-0.2,0.3 l-0.1,0.3l-0.2,0.3l-0.1,0.3l-0.1,0.3l-0.1,0.3L6,26.1l-0.1,0.3l-0.1,0.3l-0.1,0.3l-0.1,0.3l-0.1,0.3l-0.1,0.3L5.1,28l-0.1,0.3 l-0.1,0.3l-0.1,0.3l-0.1,0.3l-0.1,0.3l0,0.1l3.8,1.7l0,0l0.1-0.3l0.1-0.2l0.1-0.2l0.1-0.3l0.1-0.2l0.1-0.2L9,29.3l0.1-0.2l0.1-0.2 l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2 l0.1-0.2l0.2-0.2l0.1-0.2l0.2-0.2l0.2-0.2l0.1-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2 l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2 l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2 l0.2-0.2l0.2-0.2L17,12.4z M19.8,15.4l1.5-1.4L18.6,11L17,12.4L19.8,15.4z M27.7,5.2l-1.8,0.9l1.8,3.7l1.8-0.9L27.7,5.2z M31.6,3.4 l-0.2,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1L30.3,4L30,4.1l-0.3,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1L28.1,5l-0.3,0.1 l-0.1,0.1l1.8,3.7l0.1-0.1l0.3-0.1l0.2-0.1l0.2-0.1l0.2-0.1l0.3-0.1l0.2-0.1L31.4,8l0.2-0.1l0.3-0.1l0.3-0.1l0.2-0.1l0.3-0.1 l0.3-0.1l0.2-0.1L31.6,3.4z M33.1,7.3L35,6.5l-1.5-3.8l-1.9,0.8L33.1,7.3z M44,0.3l-2,0.2l0.5,4.1l2-0.2L44,0.3z M50-0.1L50-0.1 h-0.3l-0.3,0h-0.3h-0.3l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0l-0.3,0 l0.5,4.1l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0l0.3,0h0.3l0.3,0h0.3h0.3H50l0,0V-0.1z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <!-- Ảnh avatar -->
+                    <img src="./images/avt-chure.png" alt="Avatar">
+                </div>
             </div>
 
             <!-- Popup -->
@@ -325,174 +430,48 @@
                     </p>
                 </div>
             </div>
+
         </section>
 
         <footer class="footer-thankyou d-none" id="footer">
-            <img src="./images/footer-bg.JPG" alt="anh cuoi" srcset="">
+            <img src="./images/NDQ_6337.png" alt="anh cuoi" srcset="">
 
-            <div class="footer-content">
-                <span class="thankyou thong-tin in-up">Thank you</span>
+            <div class="footer-content thong-tin anim-left">
                 <span class="thong-tin in-up">Rất vinh dự được đón tiếp!</span>
             </div>
         </footer>
 
     </div>
 
+    <!-- Audio -->
+    <audio id="weddingAudio" loop>
+        <source src="./audio/Angel-Baby.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Audio control -->
+    <div id="audioControl" class="audio-control playing">
+        <!-- Icon playing -->
+        <svg class="icon-music icon-on" viewBox="0 0 24 24">
+            <path d="M9 18V5l12-2v13" />
+            <circle cx="6" cy="18" r="3" />
+            <circle cx="18" cy="16" r="3" />
+        </svg>
+
+        <!-- Icon muted -->
+        <svg class="icon-music icon-off" viewBox="0 0 24 24">
+            <path d="M9 18V5l12-2v13" />
+            <circle cx="6" cy="18" r="3" />
+            <circle cx="18" cy="16" r="3" />
+            <line x1="3" y1="3" x2="21" y2="21" stroke-width="2" />
+        </svg>
+    </div>
+
+
     <style>
-        /* Section */
-        .gift-section {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
 
-        .gift-container .thong-tin {
-            opacity: 0;
-        }
-
-        /* Buttons */
-        .gift-btn {
-            padding: 8px 16px;
-            border-radius: 40px;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            font-weight: 600;
-            color: #fff;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .gift-btn.bride,
-        .gift-btn.groom {
-            background: linear-gradient(115deg, var(--envelope-cover), var(--envelope-tab));
-        }
-
-        .gift-btn:hover {
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Popup */
-        .gift-popup {
-            position: fixed;
-            inset: 0;
-            display: none;
-            z-index: 999;
-        }
-
-        .gift-popup.show {
-            display: block;
-        }
-
-        /* Overlay */
-        .popup-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.6);
-            animation: fadeIn 0.3s ease;
-        }
-
-        /* Content */
-        .popup-content {
-            position: relative;
-            background: #fff;
-            max-width: 360px;
-            margin: auto;
-            margin-top: 10vh;
-            padding: 20px;
-            border-radius: 20px;
-            text-align: center;
-            animation: popupZoom 0.4s ease;
-        }
-
-        .popup-content h3 {
-            margin-bottom: 16px;
-            font-size: 20px;
-        }
-
-        .popup-content img {
-            width: 220px;
-            max-width: 100%;
-            margin: 10px auto 20px;
-        }
-
-        .thank-text {
-            font-size: 14px;
-            color: #555;
-            opacity: 0.8;
-            font-weight: 500;
-        }
-
-        /* Close button */
-        .popup-close {
-            position: absolute;
-            top: 12px;
-            right: 16px;
-            font-size: 24px;
-            border: none;
-            background: none;
-            cursor: pointer;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes popupZoom {
-            from {
-                opacity: 0;
-                transform: scale(0.8) translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
-        }
-
-        .footer-thankyou .thong-tin {
-            opacity: 0;
-        }
-
-        .footer-thankyou {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .footer-thankyou img {
-            width: 100%;
-            filter: blur(0.8px);
-        }
-
-        .footer-content {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            padding: 10px;
-            background-color: var(--envelope-cover);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .footer-content {
-            font-size: 2rem;
-            font-weight: 500;
-            color: white;
-            font-family: 'Great Vibes', cursive;
-        }
-
-        .footer-content .thankyou {}
     </style>
 
+    <!-- js popup QR -->
     <script>
         const popup = document.getElementById("giftPopup");
         const popupTitle = document.getElementById("popupTitle");
@@ -509,7 +488,7 @@
             }
         };
 
-        document.querySelectorAll(".gift-btn").forEach(btn => {
+        document.querySelectorAll("#qr-img").forEach(btn => {
             btn.addEventListener("click", () => {
                 const target = btn.dataset.target;
                 popupTitle.textContent = qrData[target].title;
@@ -524,6 +503,64 @@
         function closePopup() {
             popup.classList.remove("show");
         }
+    </script>
+    <!-- js audio -->
+    <script>
+        const audio = document.getElementById("weddingAudio");
+        const audioControl = document.getElementById("audioControl");
+
+        window.addEventListener("load", () => {
+            audio.volume = 0.6;
+
+            audio.play().then(() => {
+                audioControl.classList.add("playing");
+                audioControl.classList.remove("paused");
+            }).catch(() => {
+                audioControl.classList.add("paused");
+            });
+        });
+
+        audioControl.addEventListener("click", () => {
+            if (audio.paused) {
+                audio.play();
+                audioControl.classList.add("playing");
+                audioControl.classList.remove("paused");
+            } else {
+                audio.pause();
+                audioControl.classList.remove("playing");
+                audioControl.classList.add("paused");
+            }
+        });
+    </script>
+
+    <script>
+        const images = [
+            './images/hero-1-1.JPG?v=1',
+            './images/hero-2-1.JPG?v=1',
+            './images/hero-3-1.JPG?v=1',
+            './images/hero-4-1.jpg?v=1',
+            './images/hero-5-1.jpg?v=1'
+        ];
+
+        let index = 0;
+
+        const leftImg = document.querySelector('.img.left');
+        const centerImg = document.querySelector('.img.center');
+        const rightImg = document.querySelector('.img.right');
+
+        function render() {
+            leftImg.src = images[(index + images.length - 1) % images.length];
+            centerImg.src = images[index];
+            rightImg.src = images[(index + 1) % images.length];
+        }
+
+        function next() {
+            index = (index + 1) % images.length;
+            render();
+        }
+
+        render();
+        setInterval(next, 3000);
     </script>
 
 

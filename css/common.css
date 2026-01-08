@@ -215,3 +215,7 @@
 .border-radius-5{
     border-radius: 5px !important;
 }
+
+.anim-scale{
+    animation: scale 3s ease infinite;
+}

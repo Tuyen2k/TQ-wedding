@@ -43,6 +43,7 @@ body {
 .section-1 .envelope-wrapper {
     background-color: var(--bg-envelope-color);
     box-shadow: 0 0 40px var(--shadow-color);
+    cursor: pointer;
 }
 
 /* Envelope */
@@ -702,6 +703,22 @@ body {
     text-align: center;
 }
 
+@media (max-width: 400px) {
+    .bank-container .info {
+        font-size: 0.9rem;
+    }
+
+    .qr-img svg {
+        width: 52px !important;
+        height: 52px !important;
+    }
+
+    .avatar-ring {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 .bank-container .info .role {
     opacity: 0.8;
 }
@@ -875,7 +892,7 @@ body {
     font-family: 'Great Vibes', cursive;
 }
 
-.footer-content span{
+.footer-content span {
     text-shadow: 0 40px 1px rgb(0 0 0);
 }
 
@@ -1058,7 +1075,7 @@ body {
     height: fit-content;
 }
 
-.carousel{
+.carousel {
     display: flex;
     align-items: center;
     justify-content: space-between;
